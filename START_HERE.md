@@ -65,7 +65,7 @@ At consolidation, every active buffer item becomes one of:
 
 ## Repo roles
 
-Current intended model:
+Current model:
 
 - `BabeDrums/babel-truth` — cross-app truth/control plane; no product runtime
 - `BabeDrums/babel-fire` — FIRE product; production + successor work remain here
@@ -73,6 +73,8 @@ Current intended model:
 - future real products such as Babel World earn their own repos when they become real products
 
 A Babel World **prototype** may live in Lab. Babel Lab itself must not be renamed into World or treated as the World product.
+
+Exact current adoption commits/status live in `registry/apps.json`; do not duplicate them here.
 
 ## Shared-system boundary
 
@@ -88,8 +90,15 @@ Truth changes do **not** silently mutate product repos.
 
 Each app adopts Truth changes through an explicit reviewed update. This prevents an experimental/global change from breaking production merely because `main` changed elsewhere.
 
-Until automated version tooling is justified, apps should record the Truth commit/version they last reconciled against in a small local pointer file.
+Until automated version tooling is justified, apps record the immutable Truth commit they last reconciled against in a small local pointer file.
 
-## Current next step
+Initial adoption is complete for FIRE and Lab. Both repos are pinned to the initial Truth bootstrap commit; future Truth changes are adopted only when relevant rather than forcing pointer churn for registry/template-only maintenance.
 
-Finish the initial Babel Truth bootstrap, wire FIRE and Lab to this authority model, reconcile the latest unresolved FIRE physical review into the new continuity flow, then resume FIRE shell work under this process.
+## Current next steps
+
+Two product lanes are now ready under the new model:
+
+1. **Babel Lab:** use `templates/LAB_RECONCILIATION_PROMPT.md` with the existing Lab chat. Audit Prototype 02 against Truth before restyling; preserve intentional experiments and surface potential upstream improvements instead of silently overwriting them.
+2. **Babel FIRE:** resume the post-#60 real-device **modal + row consistency consolidation** recorded in the FIRE handoff and Continuity Buffer, ideally after reviewing any relevant upstream design insight surfaced by the Lab reconciliation.
+
+The architecture bootstrap itself is complete. New unresolved durable findings now use Issue #1 rather than creating another local continuity system.
