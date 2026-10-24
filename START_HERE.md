@@ -98,7 +98,7 @@ Parallel chats may work safely in different repos/surfaces. If two chats might w
 
 ## Current next steps
 
-1. **Babel FIRE:** execute the active modal + row consistency consolidation preserved in Issue #1, then perform physical iPhone review and iPad sanity check. G7 does not freeze automatically.
-2. **Babel Lab:** continue the split into separate Fire Lab and World Lab experimental surfaces inside `babel-lab`; Achievements belong in World Lab while Fire remains FIRE-bound if promoted.
+1. **Babel FIRE:** PR #62 is merged/deployed. Physically review the G7 shell on iPhone Safari, then sanity-check iPad. Do not freeze automatically; FIRE Core remains blocked until explicit shell approval.
+2. **Babel Lab:** the combined prototype is already split into independent Fire Lab (`fire/`) and World Lab (`world/`) surfaces. Continue each experiment according to its own product destination.
 
 The architecture bootstrap is complete. New unresolved durable findings use append-only Issue #1 comments; consolidation periodically refreshes the body.
