@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "truthRepository": "BabeDrums/babel-truth",
+  "continuityBufferIssue": 1,
+  "repositories": [
+    {
+      "name": "Babel Truth",
+      "repo": "BabeDrums/babel-truth",
+      "role": "cross-app authority and control plane",
+      "status": "active",
+      "defaultBranch": "main",
+      "runtime": false,
+      "notes": "Owns transferable principles, design foundations, process, shared semantic contracts, registry, and major architecture decisions."
+    },
+    {
+      "name": "Babel FIRE",
+      "repo": "BabeDrums/babel-fire",
+      "role": "real product repository",
+      "status": "active",
+      "defaultBranch": "main",
+      "observedMainAtBootstrap": "a62c29ab4a17b8ac11ac9eea165f4899cb6ce06a",
+      "runtime": true,
+      "truthAdoption": "pending initial reconciliation",
+      "notes": "Owns FIRE production runtime, successor preview, FIRE-specific doctrine/specs/data/tests."
+    },
+    {
+      "name": "Babel Lab",
+      "repo": "BabeDrums/babel-lab",
+      "role": "experimental sandbox and incubator",
+      "status": "active",
+      "defaultBranch": "main",
+      "observedMainAtBootstrap": "f15fce9619e17b95b980fd1c678b6434eece9faf",
+      "runtime": false,
+      "truthAdoption": "pending initial reconciliation",
+      "notes": "Uses prototype/fake state by default. May intentionally diverge from Truth when an experiment explicitly tests an alternative."
+    },
+    {
+      "name": "Babel World",
+      "repo": null,
+      "role": "future optional ecosystem hub product",
+      "status": "concept only",
+      "runtime": false,
+      "truthAdoption": "not applicable",
+      "notes": "A World prototype may live in Babel Lab. A real World product earns its own repo later; Babel Lab itself does not become World."
+    }
+  ]
+}
