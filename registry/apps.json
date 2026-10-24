@@ -20,11 +20,11 @@
       "defaultBranch": "main",
       "runtime": true,
       "truthAdoption": {
-        "status": "reconciled",
+        "status": "reconciliation pending after this Truth update",
         "truthCommit": "ae1e30b971571e7620578a48c637f0e18862375a",
-        "adoptionMergeCommit": "e2200e777da6261297525b25ea1c38606251397f"
+        "adoptionMergeCommit": "830c4dede65a1d37184b0f3c8a443b7098ac3247"
       },
-      "notes": "Owns FIRE production runtime, successor preview, FIRE-specific doctrine/specs/data/tests. V6 remains production; G7 is unfrozen. Unresolved visual-shell exploration is routed through Lab's Visual Lab, then returns to FIRE for implementation and physical validation before any transferable Truth promotion."
+      "notes": "Owns FIRE production runtime, successor preview, FIRE-specific doctrine/specs/data/tests. V6 remains production; G7 is unfrozen and owns coordinated in-context shell iteration. Lab is optional for bounded experiments only."
     },
     {
       "name": "Babel Lab",
@@ -34,11 +34,11 @@
       "defaultBranch": "main",
       "runtime": false,
       "truthAdoption": {
-        "status": "reconciled",
+        "status": "reconciliation pending after this Truth update",
         "truthCommit": "ae1e30b971571e7620578a48c637f0e18862375a",
-        "adoptionMergeCommit": "de8496405250335e937e322fb485d9e2fe934b4b"
+        "adoptionMergeCommit": "41018601edaefc954481062b0e7db9be6ab48529"
       },
-      "notes": "Lab is evidence, never authority. It may contain contradictory experiments and fake/prototype state. Current surfaces include Fire Lab under fire/, World Lab under world/, and Visual Lab under visual/ for FIRE shell experimentation. Provisional Lab workspace chrome is not an approved Babel shell."
+      "notes": "Lab is evidence, never authority. Active surfaces are Fire Lab under fire/ and World Lab under world/. The full FIRE shell replica is retired and removed from the active tree; future visual specimens should be bounded and optional. Provisional Lab workspace chrome remains intact and is not an approved Babel shell."
     },
     {
       "name": "Babel World",
