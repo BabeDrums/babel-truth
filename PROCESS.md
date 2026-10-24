@@ -7,171 +7,68 @@ This is the shared operating model for nontrivial Babel product/design work.
 > **Observe → Diagnose → Shape → Contract → Build → Verify → Consolidate**
 
 ### 1. Observe
-
-Collect current reality:
-- user/device feedback
-- current product behavior
-- repo state
-- open PRs/branches that matter
-- relevant research/reference guidance
-
-Do not begin by assuming the proposed fix is the actual problem.
+Collect current reality: user/device feedback, current product behavior, repo state, relevant open work, and relevant research/reference guidance. Do not begin by assuming the proposed fix is the actual problem.
 
 ### 2. Diagnose
-
-Classify findings before changing code:
-- system/foundation
-- component/pattern
-- screen/local composition
-- behavior/navigation
-- copy/naming
-- data/safety
-
-If the same class of defect appears on multiple screens or survives multiple passes, treat it as a system/component defect rather than another local patch.
+Classify findings before changing code: system/foundation, component/pattern, screen/local composition, behavior/navigation, copy/naming, or data/safety. Repeated defects are system/component problems rather than endless local patches.
 
 ### 3. Shape
-
-Explore the smallest coherent solution. Prefer removing complexity over compensating UI.
-
-Identify:
-- root cause
-- affected surfaces
-- intended invariant
-- risks
-- what should deliberately remain unchanged
+Explore the smallest coherent solution. Identify root cause, affected surfaces, intended invariant, risks, and what deliberately remains unchanged. Prefer removing complexity over compensating UI.
 
 ### 4. Contract
-
-Before implementation, write a short iteration contract in the working issue/PR/plan:
-- problem being solved
-- success conditions
-- explicit non-goals
-- ownership: global vs app-local vs experimental
-- validation needed
-
-Do not create a permanent spec for every pass.
+Before implementation, record the problem, success conditions, explicit non-goals, ownership (global/app-local/experimental), and validation needed. Do not create a permanent spec for every pass.
 
 ### 5. Build
-
-Implement in coherent integrated slices rather than scattered cosmetic patches.
-
-Good order when relevant:
-- shared primitive/token/rule
-- component family
-- affected screens
-- behavior/tests
-- docs/authority reconciliation
+Implement coherent integrated slices rather than scattered cosmetic patches. When relevant: primitive/token/rule → component family → affected screens → behavior/tests → docs/authority reconciliation.
 
 ### 6. Verify
-
-Use layered verification:
-- syntax/static checks
-- behavior regressions
-- geometry/computed-style assertions for design invariants when useful
-- representative compact/wide responsive checks
-- real-device review for visual/mobile behavior
-- real-project/use-case validation when the product logic itself is being tested
-
-Automated browser tests do not equal physical-device verification.
+Use layered verification: syntax/static checks, behavior regressions, geometry/style assertions when useful, compact/wide responsive checks, physical-device review, and real-project validation when product logic is being tested. Automated browser tests do not equal physical-device verification.
 
 ### 7. Consolidate
+Every material finding becomes resolved/promoted, intentionally deferred, rejected/superseded, or explicitly experimental. Remove dead/replaced implementation and stale active wording, update owning authority, reconcile Truth only for genuinely global lessons, and update adopter pointers only through explicit adoption.
 
-Every material finding ends as one of:
-- resolved and promoted into authority
-- intentionally deferred and captured in the Continuity Buffer
-- rejected/superseded and removed from active guidance
-- intentional experiment kept explicitly experimental
+## Experimental control-baseline rule
 
-Then:
-- remove dead/replaced implementation
-- remove or scope superseded active wording
-- update the owning handoff/spec
-- reconcile Babel Truth if the lesson is genuinely global
-- update adopter pointers when they intentionally adopt the new Truth state
+When Lab explores the visual/interaction shell of an **existing product**, do not begin from a knowingly simplified mini-app if missing behavior or invented harness chrome would affect the design judgment.
+
+Instead:
+
+1. establish a faithful observable control baseline for the relevant product surfaces using isolated fake/local Lab state
+2. make the visible interactions required for the experiment functional
+3. keep Lab-only navigation, explanation, state jumping, and developer controls outside the product canvas or behind an explicit Lab-only boundary
+4. verify parity on representative physical devices
+5. only then introduce deliberate experimental divergence
+6. compare the candidate against the control baseline
+7. if approved, implement the decision deliberately in the owning product and validate it there
+
+A faithful Lab replica is still **evidence, never authority**. Fidelity is for experimental validity; it does not transfer product ownership to Lab and must not create a runtime/data dependency on the production app.
+
+This rule does not require every unrelated Lab concept to reproduce a full product. Fidelity should cover the observable surfaces and behavior whose absence would contaminate the experiment.
 
 ## Persist-before-reply
 
-When a new durable unresolved fact emerges in conversation and its loss would materially change future work, persist it to the Babel Continuity Buffer before relying on another chat turn.
+When a new durable unresolved fact emerges and its loss would materially change future work, persist it to Babel Truth Issue #1 before relying on another chat turn. Comments are the append-only intake log; the issue body is the consolidated snapshot and is rewritten only during an explicit consolidation pass. Buffer evidence is low authority until classified.
 
-This is a safety net, not a transcript mirror.
-
-### Concurrency-safe buffer rule
-
-GitHub Issue #1 has two distinct roles:
-
-- **Issue comments are the append-only intake log.** Normal persist-before-reply writes from FIRE, Lab, World, or any other parallel Babel chat must be added as new comments rather than replacing the issue body.
-- **The issue body is the consolidated current snapshot.** Rewrite it only during an explicit consolidation pass, after reading the latest body and all comments added since the last consolidation.
-
-This prevents two chats from reading the same old body and accidentally overwriting each other's new findings.
-
-A buffer comment is low-authority unresolved evidence, not canonical product truth. During consolidation, classify each relevant comment as promoted, intentionally deferred, intentional experiment, or rejected/superseded; then refresh the body to represent the current unresolved snapshot. GitHub history remains the archive.
-
-### Persist immediately when
-
-- Babel explicitly says not to lose/remember a durable item
-- a real-device review changes the next implementation contract
-- a new architecture/process/product boundary is reached
-- a Lab discovery conflicts with an accepted Truth rule and needs adjudication
-- a conversation is at a plausible boundary and the unresolved item is not yet in authority
-
-### Do not persist when
-
-- the information is already canonical
-- it is transient implementation chatter
-- it is one of many speculative brainstorm options with no durable consequence yet
-- it was immediately rejected
+Persist immediately when Babel explicitly says not to lose a durable item, a real-device review changes the next contract, a new architecture/process/product boundary is reached, a Lab discovery conflicts with accepted Truth, or a chat boundary risks losing unresolved work. Do not persist transient chatter, already-canonical facts, immediately rejected ideas, or every brainstorm option.
 
 ## Parallel work and write ownership
 
-Parallel chats are encouraged when they own different repositories or independent surfaces.
-
-Before any durable write, re-read the current target state and relevant open PRs. If another chat already owns the same branch/file/PR, do not write from stale state; reconcile or wait for the owning lane to finish.
-
-Truth adoption remains pinned and explicit, so a Truth update does not silently mutate apps that are mid-pass.
+Before durable writes, re-read current target state and relevant open PRs. If another lane owns the same branch/file/PR, reconcile rather than writing from stale state. Truth adoption remains pinned and explicit.
 
 ## Contradiction handling
 
-Do not solve contradiction by accumulating qualifiers forever.
+When rule B replaces A: update current authority to B, remove/rewrite A where it still presents as current, update guards/tests protecting A, leave historical commits alone, and preserve architectural reasoning only when worth a decision record.
 
-When rule B replaces rule A:
-1. update the current authority to B
-2. remove/rewrite A anywhere it still presents as current
-3. update tests/guards that protect A
-4. leave historical commits alone
-5. create/supersede a decision record only if the architectural reasoning is important enough to preserve explicitly
+## Lab / Truth / App flow
 
-## Lab → Truth → App flow
+Babel Lab is an experiment chamber. Lab may contain stale divergence, intentional experiments, potential upstream improvements, and app-local differences; classify them rather than silently normalizing everything.
 
-Babel Lab is an experiment chamber, not downstream implementation by default.
-
-When reconciling Lab with Truth:
-
-- **stale divergence** → Lab adopts Truth
-- **intentional experiment** → Lab keeps the deviation and labels the hypothesis
-- **potential upstream improvement** → stop and compare evidence; Truth may change first
-- **app-local difference** → keep it local; do not universalize it
-
-When promoting a Lab concept into a real app, transfer the validated semantics and decisions, not every line of prototype code.
+When promoting a Lab concept into a real app, transfer validated semantics/decisions deliberately. Prototype code does not become canonical merely because it worked in Lab.
 
 ## Truth adoption by apps
 
-Truth should not live-couple production repos.
-
-Adoption is explicit:
-1. inspect Truth changes since the app's recorded reconciliation ref
-2. classify each relevant change
-3. surface conflicts instead of silently overwriting intentional local decisions
-4. update app docs/code/tests as appropriate
-5. record the new Truth ref in the app pointer
-
-A future automated updater may open adoption PRs, but it must not silently deploy cross-app changes.
+Truth should not live-couple production repos. Adoption is explicit: inspect changes since the app's recorded reconciliation ref, classify relevant changes, surface conflicts, update app docs/code/tests as appropriate, and record the new Truth ref.
 
 ## Review efficiency
 
-For physical/product review:
-- review changed system surfaces first
-- sanity-check unchanged surfaces second
-- separate overall-system feedback from detail feedback
-- avoid re-litigating settled rules unless new evidence actually challenges them
-
-The goal is not more passes. The goal is for each pass to eliminate a whole class of inconsistency.
+For physical/product review, review changed system surfaces first, sanity-check unchanged surfaces second, separate system feedback from detail feedback, and avoid re-litigating settled rules without new evidence. The goal is for each pass to eliminate a class of inconsistency.
