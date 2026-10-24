@@ -91,9 +91,20 @@ Then:
 
 ## Persist-before-reply
 
-When a new durable unresolved fact emerges in conversation and its loss would materially change future work, write it to the Babel Continuity Buffer before relying on another chat turn.
+When a new durable unresolved fact emerges in conversation and its loss would materially change future work, persist it to the Babel Continuity Buffer before relying on another chat turn.
 
 This is a safety net, not a transcript mirror.
+
+### Concurrency-safe buffer rule
+
+GitHub Issue #1 has two distinct roles:
+
+- **Issue comments are the append-only intake log.** Normal persist-before-reply writes from FIRE, Lab, World, or any other parallel Babel chat must be added as new comments rather than replacing the issue body.
+- **The issue body is the consolidated current snapshot.** Rewrite it only during an explicit consolidation pass, after reading the latest body and all comments added since the last consolidation.
+
+This prevents two chats from reading the same old body and accidentally overwriting each other's new findings.
+
+A buffer comment is low-authority unresolved evidence, not canonical product truth. During consolidation, classify each relevant comment as promoted, intentionally deferred, intentional experiment, or rejected/superseded; then refresh the body to represent the current unresolved snapshot. GitHub history remains the archive.
 
 ### Persist immediately when
 
@@ -109,6 +120,14 @@ This is a safety net, not a transcript mirror.
 - it is transient implementation chatter
 - it is one of many speculative brainstorm options with no durable consequence yet
 - it was immediately rejected
+
+## Parallel work and write ownership
+
+Parallel chats are encouraged when they own different repositories or independent surfaces.
+
+Before any durable write, re-read the current target state and relevant open PRs. If another chat already owns the same branch/file/PR, do not write from stale state; reconcile or wait for the owning lane to finish.
+
+Truth adoption remains pinned and explicit, so a Truth update does not silently mutate apps that are mid-pass.
 
 ## Contradiction handling
 

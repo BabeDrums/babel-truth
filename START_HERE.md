@@ -13,7 +13,7 @@ This repository is the first read for **cross-app Babel rules**. It does not rep
 5. `PROCESS.md` — iteration, continuity, contradiction, and promotion workflow
 6. `registry/apps.json` — current repo/app roles and Truth adoption state
 7. relevant accepted decision records in `decisions/`
-8. GitHub Issue #1 (`Babel Continuity Buffer`) only for unresolved durable deltas
+8. GitHub Issue #1 (`Babel Continuity Buffer`) body + newer comments for unresolved durable deltas
 9. then the owning app's local handoff/spec/code
 
 ## Authority model
@@ -53,15 +53,17 @@ GitHub Issue #1 is the lightweight unresolved continuity buffer.
 
 For Babel work, use **persist-before-reply** when a conversation produces a new durable decision, constraint, real-device finding, cross-app rule, or important unresolved question that is not already safely represented in authority.
 
+For routine capture, append a **new comment** to Issue #1. Do not replace the issue body. The body is only the consolidated current snapshot and is refreshed during explicit consolidation after reading all newer comments. This lets multiple Babel chats persist findings concurrently without overwriting each other.
+
 This does **not** mean storing every message. Persist only information whose loss at a chat boundary would cost real work or change the next decision.
 
-At consolidation, every active buffer item becomes one of:
+At consolidation, every active buffer item/comment becomes one of:
 
 - promoted to Babel Truth
 - promoted to an app-local authority
 - retained as an intentional Lab experiment
-- intentionally deferred and left in the buffer
-- rejected/superseded and removed from the active buffer
+- intentionally deferred and kept in the unresolved snapshot
+- rejected/superseded and removed from the active snapshot
 
 ## Repo roles
 
@@ -92,13 +94,11 @@ Each app adopts Truth changes through an explicit reviewed update. This prevents
 
 Until automated version tooling is justified, apps record the immutable Truth commit they last reconciled against in a small local pointer file.
 
-Initial adoption is complete for FIRE and Lab. Both repos are pinned to the initial Truth bootstrap commit; future Truth changes are adopted only when relevant rather than forcing pointer churn for registry/template-only maintenance.
+Parallel chats may work safely in different repos/surfaces. If two chats might write the same durable file/branch/PR, the later writer must re-read current state and reconcile rather than assuming its earlier snapshot still owns the surface.
 
 ## Current next steps
 
-Two product lanes are now ready under the new model:
+1. **Babel FIRE:** execute the active modal + row consistency consolidation preserved in Issue #1, then perform physical iPhone review and iPad sanity check. G7 does not freeze automatically.
+2. **Babel Lab:** continue the split into separate Fire Lab and World Lab experimental surfaces inside `babel-lab`; Achievements belong in World Lab while Fire remains FIRE-bound if promoted.
 
-1. **Babel Lab:** use `templates/LAB_RECONCILIATION_PROMPT.md` with the existing Lab chat. Audit Prototype 02 against Truth before restyling; preserve intentional experiments and surface potential upstream improvements instead of silently overwriting them.
-2. **Babel FIRE:** resume the post-#60 real-device **modal + row consistency consolidation** recorded in the FIRE handoff and Continuity Buffer, ideally after reviewing any relevant upstream design insight surfaced by the Lab reconciliation.
-
-The architecture bootstrap itself is complete. New unresolved durable findings now use Issue #1 rather than creating another local continuity system.
+The architecture bootstrap is complete. New unresolved durable findings use append-only Issue #1 comments; consolidation periodically refreshes the body.
