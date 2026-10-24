@@ -21,10 +21,10 @@
       "runtime": true,
       "truthAdoption": {
         "status": "reconciled",
-        "truthCommit": "8d957cb8725d699202a8de92481b1ed56adc0fa0",
-        "adoptionMergeCommit": "82a40e0706a5776b969b8935a6187861f9a1f37f"
+        "truthCommit": "531ad751be11573b224a91694d5eb870f0cea607",
+        "adoptionMergeCommit": "cdbcd23fca4fad338f62ce024dc6e89558b602d4"
       },
-      "notes": "Owns FIRE production runtime, successor preview, FIRE-specific doctrine/specs/data/tests. New unresolved durable FIRE deltas use Babel Truth Issue #1."
+      "notes": "Owns FIRE production runtime, successor preview, FIRE-specific doctrine/specs/data/tests. G7 PR #62 is deployed and awaiting explicit physical shell approval before FIRE Core breadboarding. New unresolved durable FIRE deltas use Babel Truth Issue #1 comments."
     },
     {
       "name": "Babel Lab",
@@ -38,7 +38,7 @@
         "truthCommit": "8d957cb8725d699202a8de92481b1ed56adc0fa0",
         "adoptionMergeCommit": "4cf277c1c36fbce71b734eaafa3fa9b61e2d3f19"
       },
-      "notes": "Uses prototype/fake state by default. May intentionally diverge from Truth when an experiment explicitly tests an alternative. Next product step is a reconciliation review of Prototype 02, not blind restyling."
+      "notes": "Uses prototype/fake state by default. Current Lab structure separates Fire Lab under fire/ from World Lab under world/; Achievements live in World Lab, while Fire is FIRE-bound if promoted. Lab may intentionally diverge from Truth when an experiment explicitly tests an alternative."
     },
     {
       "name": "Babel World",
@@ -47,7 +47,7 @@
       "status": "concept only",
       "runtime": false,
       "truthAdoption": "not applicable",
-      "notes": "A World prototype may live in Babel Lab. A real World product earns its own repo later; Babel Lab itself does not become World."
+      "notes": "World experiments currently live under babel-lab/world/. A real World product earns its own repo later; Babel Lab itself does not become World."
     }
   ]
 }
