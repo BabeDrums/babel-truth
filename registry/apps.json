@@ -21,10 +21,10 @@
       "runtime": true,
       "truthAdoption": {
         "status": "reconciled",
-        "truthCommit": "531ad751be11573b224a91694d5eb870f0cea607",
-        "adoptionMergeCommit": "cdbcd23fca4fad338f62ce024dc6e89558b602d4"
+        "truthCommit": "ae1e30b971571e7620578a48c637f0e18862375a",
+        "adoptionMergeCommit": "e2200e777da6261297525b25ea1c38606251397f"
       },
-      "notes": "Owns FIRE production runtime, successor preview, FIRE-specific doctrine/specs/data/tests. G7 PR #62 is deployed and awaiting explicit physical shell approval before FIRE Core breadboarding. New unresolved durable FIRE deltas use Babel Truth Issue #1 comments."
+      "notes": "Owns FIRE production runtime, successor preview, FIRE-specific doctrine/specs/data/tests. V6 remains production; G7 is unfrozen. Unresolved visual-shell exploration is routed through Lab's Visual Lab, then returns to FIRE for implementation and physical validation before any transferable Truth promotion."
     },
     {
       "name": "Babel Lab",
@@ -35,10 +35,10 @@
       "runtime": false,
       "truthAdoption": {
         "status": "reconciled",
-        "truthCommit": "8d957cb8725d699202a8de92481b1ed56adc0fa0",
-        "adoptionMergeCommit": "4cf277c1c36fbce71b734eaafa3fa9b61e2d3f19"
+        "truthCommit": "ae1e30b971571e7620578a48c637f0e18862375a",
+        "adoptionMergeCommit": "de8496405250335e937e322fb485d9e2fe934b4b"
       },
-      "notes": "Uses prototype/fake state by default. Current Lab structure separates Fire Lab under fire/ from World Lab under world/; Achievements live in World Lab, while Fire is FIRE-bound if promoted. Lab may intentionally diverge from Truth when an experiment explicitly tests an alternative."
+      "notes": "Lab is evidence, never authority. It may contain contradictory experiments and fake/prototype state. Current surfaces include Fire Lab under fire/, World Lab under world/, and Visual Lab under visual/ for FIRE shell experimentation. Provisional Lab workspace chrome is not an approved Babel shell."
     },
     {
       "name": "Babel World",
