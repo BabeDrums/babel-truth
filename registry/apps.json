@@ -18,10 +18,13 @@
       "role": "real product repository",
       "status": "active",
       "defaultBranch": "main",
-      "observedMainAtBootstrap": "a62c29ab4a17b8ac11ac9eea165f4899cb6ce06a",
       "runtime": true,
-      "truthAdoption": "pending initial reconciliation",
-      "notes": "Owns FIRE production runtime, successor preview, FIRE-specific doctrine/specs/data/tests."
+      "truthAdoption": {
+        "status": "reconciled",
+        "truthCommit": "8d957cb8725d699202a8de92481b1ed56adc0fa0",
+        "adoptionMergeCommit": "82a40e0706a5776b969b8935a6187861f9a1f37f"
+      },
+      "notes": "Owns FIRE production runtime, successor preview, FIRE-specific doctrine/specs/data/tests. New unresolved durable FIRE deltas use Babel Truth Issue #1."
     },
     {
       "name": "Babel Lab",
@@ -29,10 +32,13 @@
       "role": "experimental sandbox and incubator",
       "status": "active",
       "defaultBranch": "main",
-      "observedMainAtBootstrap": "f15fce9619e17b95b980fd1c678b6434eece9faf",
       "runtime": false,
-      "truthAdoption": "pending initial reconciliation",
-      "notes": "Uses prototype/fake state by default. May intentionally diverge from Truth when an experiment explicitly tests an alternative."
+      "truthAdoption": {
+        "status": "reconciled",
+        "truthCommit": "8d957cb8725d699202a8de92481b1ed56adc0fa0",
+        "adoptionMergeCommit": "4cf277c1c36fbce71b734eaafa3fa9b61e2d3f19"
+      },
+      "notes": "Uses prototype/fake state by default. May intentionally diverge from Truth when an experiment explicitly tests an alternative. Next product step is a reconciliation review of Prototype 02, not blind restyling."
     },
     {
       "name": "Babel World",
