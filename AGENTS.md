@@ -57,6 +57,14 @@ Truth owns cross-app foundations, shared process, repo roles, semantic contracts
 
 > **Lab is evidence, never authority.**
 
+## Conflict classification
+
+When an app/Lab rule differs from Truth, classify it before editing:
+1. **stale divergence** — adopter should update to Truth
+2. **intentional experiment** — keep the deviation and label the hypothesis
+3. **potential upstream improvement** — stop and decide whether Truth should change first
+4. **app-local exception** — keep it local and clarify ownership
+
 ## Contradictions
 
 Active authority should contain **one current truth**.
@@ -89,6 +97,14 @@ Do not persist jokes, every brainstorm option, already-canonical rules, immediat
 Before any durable write, re-read current target state and relevant open PRs. If another chat already owns the same branch/file/PR/surface, reconcile current state before writing.
 
 Truth changes do not silently mutate adopters. Each app/Lab remains pinned to the immutable Truth commit it last reconciled against until an explicit adoption pass.
+
+## Change workflow
+
+Normal durable Truth change:
+
+**classify → shape → branch → edit → remove contradictions → review diff → PR → merge → deliberately update adopters**
+
+Babel has standing permission to merge a Truth PR when the diff has been reviewed, the scope is genuinely cross-app, no important semantic conflict remains unresolved, and downstream adoption implications are understood. Stop instead when ownership or product meaning is genuinely unresolved.
 
 ## Major decisions
 
