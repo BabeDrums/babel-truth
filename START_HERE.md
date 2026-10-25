@@ -10,7 +10,7 @@ This repository is the first read for **cross-app Babel rules**. It does not rep
 2. `AGENTS.md` — repository/process rules
 3. `PRODUCT_PRINCIPLES.md` — Babel-wide product principles
 4. `DESIGN.md` — Babel-wide design and interaction foundations
-5. `PROCESS.md` — iteration, continuity, contradiction, and promotion workflow
+5. `PROCESS.md` — iteration, continuity, adoption, contradiction, and promotion workflow
 6. `registry/apps.json` — current repo/app roles and Truth adoption state
 7. relevant accepted decision records in `decisions/`
 8. GitHub Issue #1 (`Babel Continuity Buffer`) body + newer comments for unresolved durable deltas
@@ -49,9 +49,9 @@ Lab experiments may use current Babel foundations as a convenient starting point
 
 Promotion is deliberate. For shell/visual work the default evidence path is:
 
-**Lab experiment → physical-device testing → candidate → owning product implementation → owning product physical validation → transferable rules promoted to Babel Truth.**
+**bounded experiment (optional) → owning-product candidate → owning-product physical validation → transferable rules promoted to Babel Truth.**
 
-Promote validated decisions/semantics, not prototype code by default. A Lab result does not become Babel-wide merely because it is polished or approved inside the Lab.
+A Lab experiment can contribute evidence at the bounded-experiment step, but products do not need to route coordinated shell work through Lab. Promote validated decisions/semantics, not prototype code by default. A Lab result does not become Babel-wide merely because it is polished or approved inside Lab.
 
 ## Contradiction rule
 
@@ -112,8 +112,8 @@ Parallel chats may work safely in different repos/surfaces. If two chats might w
 
 ## Current next steps
 
-1. **Babel Lab:** use a dedicated FIRE Shell / Visual Lab harness to explore the unresolved visual-interaction shell across representative surfaces, states, and iPhone/iPad adaptation. It is an experiment harness, not a FIRE fork and not a design-system authority.
-2. **Babel FIRE:** keep V6 production untouched and G7 unfrozen. Pause further exploratory shell styling in the product while Lab develops a candidate. FIRE Core remains blocked until the generic shell fundamentals are explicitly approved after real-product validation.
-3. **Promotion:** physically test Lab candidates; implement the chosen candidate deliberately in FIRE; validate it again in real FIRE; only then promote genuinely transferable rules into Babel Truth.
+1. **Babel FIRE:** keep V6 production untouched. Coordinated shell implementation/certification belongs in FIRE's isolated G7 context, using the real G7 primitives, developer Shell Test, regression gates, and physical iPhone/iPad review. FIRE Core remains blocked until the FIRE-local shell certification/freeze gate is explicitly satisfied.
+2. **Babel Lab:** remain an optional sandbox for bounded experiments only. Do not maintain a parallel full FIRE shell or require FIRE shell progress to pass through Lab. Lab output is evidence that the owning product may deliberately adopt, reject, or reinterpret.
+3. **Promotion:** after FIRE explicitly freezes the generic shell fundamentals, promote only genuinely transferable validated rules into Babel Truth. FIRE Core may then begin while Lab independently reconciles to the promoted Truth; Lab reconciliation does not block FIRE Core.
 
 New unresolved durable findings use append-only Issue #1 comments; consolidation periodically refreshes the body.
