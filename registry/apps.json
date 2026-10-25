@@ -21,8 +21,8 @@
       "runtime": true,
       "truthAdoption": {
         "status": "reconciled",
-        "truthCommit": "ae1e30b971571e7620578a48c637f0e18862375a",
-        "adoptionMergeCommit": "e2200e777da6261297525b25ea1c38606251397f"
+        "truthCommit": "d191882918402c1a2fbd22f485496a25d8abb700",
+        "adoptionMergeCommit": "d00d146cb3b0e9a247d3d3f3b666f685e3d7ee2a"
       },
       "notes": "Owns FIRE production runtime, successor preview, FIRE-specific doctrine/specs/data/tests. V6 remains production; G7 is unfrozen. Coordinated FIRE shell implementation and certification live in isolated G7; Lab is optional bounded evidence only. Transferable shell rules are eligible for Truth promotion only after FIRE physical validation/freeze."
     },
