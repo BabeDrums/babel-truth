@@ -10,7 +10,7 @@
       "status": "active",
       "defaultBranch": "main",
       "runtime": false,
-      "notes": "Owns transferable principles, design foundations, process, shared semantic contracts, registry, and major architecture decisions."
+      "notes": "Owns transferable foundations, shared operating rules, semantic contracts, registry, and major architecture decisions."
     },
     {
       "name": "Babel FIRE",
@@ -21,10 +21,10 @@
       "runtime": true,
       "truthAdoption": {
         "status": "reconciled",
-        "truthCommit": "d191882918402c1a2fbd22f485496a25d8abb700",
-        "adoptionMergeCommit": "d00d146cb3b0e9a247d3d3f3b666f685e3d7ee2a"
+        "truthCommit": "8862c5367691f618fe0eea9e166b7cfffee54c77",
+        "adoptionMergeCommit": "f512b90065c58a2426e79e4a99941a22b22fe35e"
       },
-      "notes": "Owns FIRE production runtime, successor preview, FIRE-specific doctrine/specs/data/tests. V6 remains production; G7 is unfrozen. Coordinated FIRE shell implementation and certification live in isolated G7; Lab is optional bounded evidence only. Transferable shell rules are eligible for Truth promotion only after FIRE physical validation/freeze."
+      "notes": "Owns FIRE production runtime, successor preview, FIRE-specific doctrine/specs/data/tests. V6 remains production; G7 is unfrozen. Coordinated shell certification stays in isolated G7; FIRE Core remains blocked until explicit shell freeze."
     },
     {
       "name": "Babel Lab",
@@ -35,10 +35,10 @@
       "runtime": false,
       "truthAdoption": {
         "status": "reconciled",
-        "truthCommit": "ae1e30b971571e7620578a48c637f0e18862375a",
-        "adoptionMergeCommit": "de8496405250335e937e322fb485d9e2fe934b4b"
+        "truthCommit": "8862c5367691f618fe0eea9e166b7cfffee54c77",
+        "adoptionMergeCommit": "e4889afde12b3ad79f5640dac5f8e1beb5841e9e"
       },
-      "notes": "Lab is evidence, never authority. It may contain contradictory experiments and fake/prototype state. Fire- and World-bound experiments may coexist here, but Lab does not own coordinated FIRE shell certification and must not maintain a parallel full FIRE shell merely for G7 validation."
+      "notes": "Lab is evidence, never authority. Active Fire/World experiments remain isolated from production runtime/data; there is no active full FIRE shell replica."
     },
     {
       "name": "Babel World",
