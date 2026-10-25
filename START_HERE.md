@@ -2,118 +2,82 @@
 
 Use **Babel** as the project-facing name.
 
-This repository is the first read for **cross-app Babel rules**. It does not replace app-local authority.
+This repository is the first read for **cross-app Babel authority**. It does not replace app-local authority.
 
-## Read order
+## Minimal read order
 
-1. `START_HERE.md` — this routing/authority summary
-2. `AGENTS.md` — repository/process rules
-3. `PRODUCT_PRINCIPLES.md` — Babel-wide product principles
-4. `DESIGN.md` — Babel-wide design and interaction foundations
-5. `PROCESS.md` — iteration, continuity, adoption, contradiction, and promotion workflow
-6. `registry/apps.json` — current repo/app roles and Truth adoption state
-7. relevant accepted decision records in `decisions/`
-8. GitHub Issue #1 (`Babel Continuity Buffer`) body + newer comments for unresolved durable deltas
-9. then the owning app's local handoff/spec/code
+1. `START_HERE.md` — this authority/routing map
+2. `AGENTS.md` — shared operating rules, including research-first feedback interpretation
+3. `FOUNDATIONS.md` — shared product/design/interaction defaults when relevant
+4. `registry/apps.json` and relevant accepted `decisions/` only when the task needs them
+5. Babel Continuity Buffer Issue #1 body + newer comments for relevant unresolved durable findings
+6. then the owning app/Lab handoff and code
+
+Do not read every historical file by default. Pull deeper context only when the task needs it.
 
 ## Authority model
 
-Babel Truth owns only what must genuinely transfer across products.
+Babel Truth owns only what genuinely needs to transfer across products.
 
 When sources conflict:
-
-1. a settled Babel Truth rule wins for cross-app semantics/process/design foundations
-2. the owning app's canonical product spec wins for app-local behavior
-3. an intentional Lab experiment may diverge from Truth while the experiment is explicitly testing an alternative
-4. the Continuity Buffer is low-authority and never silently overrides accepted Truth or app authority
-5. old prototypes, old summaries, and Git history are evidence/history, not current authority
-
-### Four homes for information
+1. settled Babel Truth wins for cross-app semantics/process/foundations
+2. the owning app's canonical authority wins for app-local behavior
+3. an intentional Lab experiment may diverge while explicitly testing an alternative
+4. the Continuity Buffer is unresolved evidence, not authority
+5. old prototypes, PRs, and Git history are history/evidence, not current authority
 
 Classify durable information before storing it:
-
 - **Global** → Babel Truth
 - **App-local** → owning app repository
-- **Experimental** → Babel Lab / experiment authority
-- **Unresolved** → Babel Continuity Buffer until resolved
+- **Experimental** → Babel Lab
+- **Unresolved** → Babel Continuity Buffer
 
-Do not copy app-local runtime state into Babel Truth merely so another chat can find it.
-
-## Lab evidence boundary
-
-> **Lab is evidence, never authority.**
-
-Babel Lab is allowed to contain mutually contradictory styles, controls, layouts, interactions, prototypes, and product hypotheses at the same time. No product or Truth rule should derive a design merely because that design exists in Lab, and there is no single "Lab style" that downstream work should inherit.
-
-Lab experiments may use current Babel foundations as a convenient starting point, but that does not make those foundations mandatory inside an experiment. When an experiment intentionally tests an alternative, preserve and label the divergence rather than forcing convergence.
-
-Promotion is deliberate. For shell/visual work the default evidence path is:
-
-**bounded experiment (optional) → owning-product candidate → owning-product physical validation → transferable rules promoted to Babel Truth.**
-
-A Lab experiment can contribute evidence at the bounded-experiment step, but products do not need to route coordinated shell work through Lab. Promote validated decisions/semantics, not prototype code by default. A Lab result does not become Babel-wide merely because it is polished or approved inside Lab.
-
-## Contradiction rule
-
-> **Active authority should contain one current truth.**
-
-When a current rule is replaced, rewrite/remove the superseded active wording instead of leaving two competing instructions. Preserve implementation history in Git. Preserve major architectural reasoning in a decision record when future maintainers genuinely need to know why a prior approach was superseded.
-
-Historical truth is not active truth.
-
-## Continuity rule
-
-GitHub Issue #1 is the lightweight unresolved continuity buffer.
-
-For Babel work, use **persist-before-reply** when a conversation produces a new durable decision, constraint, real-device finding, cross-app rule, or important unresolved question that is not already safely represented in authority.
-
-For routine capture, append a **new comment** to Issue #1. Do not replace the issue body. The body is only the consolidated current snapshot and is refreshed during explicit consolidation after reading all newer comments. This lets multiple Babel chats persist findings concurrently without overwriting each other.
-
-This does **not** mean storing every message. Persist only information whose loss at a chat boundary would cost real work or change the next decision.
-
-At consolidation, every active buffer item/comment becomes one of:
-
-- promoted to Babel Truth
-- promoted to an app-local authority
-- retained as an intentional Lab experiment
-- intentionally deferred and kept in the unresolved snapshot
-- rejected/superseded and removed from the active snapshot
+> **One current truth. Clear ownership. History stays in Git.**
 
 ## Repo roles
 
-Current model:
-
 - `BabeDrums/babel-truth` — cross-app truth/control plane; no product runtime
-- `BabeDrums/babel-fire` — FIRE product; production + successor work remain here
+- `BabeDrums/babel-fire` — FIRE product; production + successor work
 - `BabeDrums/babel-lab` — experimental sandbox/incubator using fake/prototype state by default
-- future real products such as Babel World earn their own repos when they become real products
+- future real products earn their own repos when a real product job exists
 
-A Babel World **prototype** may live in Lab. Babel Lab itself must not be renamed into World or treated as the World product.
+A World prototype may live in Lab. Lab itself is not the World product.
 
-Exact current adoption commits/status live in `registry/apps.json`; do not duplicate them here.
+## Lab boundary
 
-## Shared-system boundary
+> **Lab is evidence, never authority.**
 
-Do not build a giant speculative universal component library.
+Lab may contain contradictory styles, interactions, and hypotheses. Another product does not inherit a design merely because it exists in Lab.
 
-Centralize proven cross-app principles, semantic patterns, small foundation tokens, process, and contracts first. Extract shared implementation only after multiple real products prove that the same component semantics and code genuinely need reuse.
+Default evidence path when a Lab experiment is useful:
 
-Apps should feel related without becoming skins of one template.
+**bounded experiment → owning-product candidate → owning-product physical/real-use validation → genuinely transferable rule promoted to Truth**
+
+A Lab step is optional.
 
 ## Adoption model
 
-Truth changes do **not** silently mutate product repos.
+Truth changes do **not** silently mutate product repos. Apps/Lab explicitly compare and adopt a newer immutable Truth commit, then update their local pointer.
 
-Each app adopts Truth changes through an explicit reviewed update. This prevents an experimental/global change from breaking production merely because `main` changed elsewhere.
+`registry/apps.json` records adoption refs/status. Do not duplicate exact adoption SHAs in prose files.
 
-Until automated version tooling is justified, apps record the immutable Truth commit they last reconciled against in a small local pointer file.
+## Continuity
 
-Parallel chats may work safely in different repos/surfaces. If two chats might write the same durable file/branch/PR, the later writer must re-read current state and reconcile rather than assuming its earlier snapshot still owns the surface.
+Issue #1 is the unresolved durable buffer.
 
-## Current next steps
+Normal persist-before-reply capture is append-only through **new comments**. The issue body is the consolidated current snapshot and is rewritten only during explicit consolidation after reading the body and all newer comments.
 
-1. **Babel FIRE:** keep V6 production untouched. Coordinated shell implementation/certification belongs in FIRE's isolated G7 context, using the real G7 primitives, developer Shell Test, regression gates, and physical iPhone/iPad review. FIRE Core remains blocked until the FIRE-local shell certification/freeze gate is explicitly satisfied.
-2. **Babel Lab:** remain an optional sandbox for bounded experiments only. Do not maintain a parallel full FIRE shell or require FIRE shell progress to pass through Lab. Lab output is evidence that the owning product may deliberately adopt, reject, or reinterpret.
-3. **Promotion:** after FIRE explicitly freezes the generic shell fundamentals, promote only genuinely transferable validated rules into Babel Truth. FIRE Core may then begin while Lab independently reconciles to the promoted Truth; Lab reconciliation does not block FIRE Core.
+Do not use it as a transcript archive.
 
-New unresolved durable findings use append-only Issue #1 comments; consolidation periodically refreshes the body.
+## Shared-system boundary
+
+Do not build a speculative universal component library. Share validated semantics, principles, small foundation tokens, and contracts first. Extract shared implementation only after multiple real products prove the same code and meaning genuinely need reuse.
+
+## Current cross-app sequence
+
+1. **FIRE:** continue local G7 shell certification/physical review. V6 remains production. FIRE Core stays blocked until FIRE explicitly satisfies its shell freeze gate.
+2. **After FIRE shell freeze:** promote only the proven transferable shell rules into Truth.
+3. **Then parallelize:** FIRE may begin FIRE Core breadboarding while Lab independently adopts the promoted Truth and reconciles its generic chrome. Lab reconciliation does not block FIRE Core.
+4. **Lab:** otherwise remain a bounded-experiment sandbox; do not maintain a parallel full FIRE shell.
+
+The owning repo's current handoff always controls its exact build/PR/next-step state.
