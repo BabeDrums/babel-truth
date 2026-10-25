@@ -24,7 +24,7 @@
         "truthCommit": "ae1e30b971571e7620578a48c637f0e18862375a",
         "adoptionMergeCommit": "e2200e777da6261297525b25ea1c38606251397f"
       },
-      "notes": "Owns FIRE production runtime, successor preview, FIRE-specific doctrine/specs/data/tests. V6 remains production; G7 is unfrozen. Unresolved visual-shell exploration is routed through Lab's Visual Lab, then returns to FIRE for implementation and physical validation before any transferable Truth promotion."
+      "notes": "Owns FIRE production runtime, successor preview, FIRE-specific doctrine/specs/data/tests. V6 remains production; G7 is unfrozen. Coordinated FIRE shell implementation and certification live in isolated G7; Lab is optional bounded evidence only. Transferable shell rules are eligible for Truth promotion only after FIRE physical validation/freeze."
     },
     {
       "name": "Babel Lab",
@@ -38,7 +38,7 @@
         "truthCommit": "ae1e30b971571e7620578a48c637f0e18862375a",
         "adoptionMergeCommit": "de8496405250335e937e322fb485d9e2fe934b4b"
       },
-      "notes": "Lab is evidence, never authority. It may contain contradictory experiments and fake/prototype state. Current surfaces include Fire Lab under fire/, World Lab under world/, and Visual Lab under visual/ for FIRE shell experimentation. Provisional Lab workspace chrome is not an approved Babel shell."
+      "notes": "Lab is evidence, never authority. It may contain contradictory experiments and fake/prototype state. Fire- and World-bound experiments may coexist here, but Lab does not own coordinated FIRE shell certification and must not maintain a parallel full FIRE shell merely for G7 validation."
     },
     {
       "name": "Babel World",
