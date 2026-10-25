@@ -1,99 +1,118 @@
-# Babel Truth — Repository Rules
+# Babel Truth — Agent Rules
 
-This repository stores cross-app Babel truth only.
+This repository owns **cross-app Babel rules only**. Use **Babel** as the project-facing name.
 
-## Before writing
+## Entry
 
-1. Read `START_HERE.md`.
-2. Inspect the active Continuity Buffer (Issue #1) for relevant unresolved deltas, including newer comments not yet consolidated into the body.
-3. Check whether the proposed rule is actually global. If it belongs to one app, write it there instead.
-4. Check whether an open PR already owns the same rule/surface.
+Before substantive Babel work:
+1. read `START_HERE.md`
+2. read this file
+3. read `FOUNDATIONS.md` when product/design decisions matter
+4. inspect relevant accepted records in `decisions/` and current adoption metadata in `registry/apps.json` when needed
+5. inspect Babel Continuity Buffer Issue #1 body + newer comments for relevant unresolved durable findings
+6. then read the owning app/Lab handoff and code
 
-## Never do these
+Do not copy app-local specs into Truth just to make them easier to find.
 
-- Do not copy entire app specs into Babel Truth.
-- Do not make Babel Truth a runtime dependency that silently controls production apps.
-- Do not promote a Lab experiment merely because it exists.
-- Do not preserve two contradictory current rules side-by-side.
-- Do not create universal UI/components before reuse is proven.
-- Do not use this repo as a transcript archive.
-- Do not use full Issue #1 body replacement for routine persist-before-reply capture.
+## Interpret feedback before implementing it
 
-## Change workflow
+**User feedback is evidence and desired outcome, not automatically a literal implementation command.**
 
-Normal durable change:
+Unless Babel explicitly locks an exact implementation, treat observations, proposed fixes, screenshots, and recommendations as inputs to diagnose:
+- what problem is actually being experienced
+- whether the cause is system-level, component-level, local composition, behavior, copy, data, or environment
+- whether the proposed direction is the best solution or only one possible solution
 
-**classify → shape → branch → edit → reconcile contradictions → review diff → PR → merge → update adopters deliberately**
+For nontrivial design/technical/product decisions, inspect current repo/product reality and use current authoritative research when it can materially improve the decision. Prefer elegant shared fixes over page-specific compensation.
 
-Babel has standing permission to merge Truth PRs once the diff is reviewed, the scope is genuinely cross-app, no important semantic conflict remains unresolved, and downstream adoption implications are understood.
+If Babel's proposed direction conflicts with stronger evidence, product goals, safety, or current authority, say so clearly and recommend the better direction rather than following it mechanically.
 
-## Persist-before-reply
+At meaningful decision/review boundaries, automatically surface any **material questions, recommendations, comments, or concerns** that would change the next step. Do not manufacture a list when none exist; say the path is clear and proceed.
 
-For Babel conversations, if a new piece of information is both durable and unresolved, and losing the chat before consolidation would change future work, persist it to Issue #1 before relying on another turn.
+## Shared operating loop
 
-### Normal write path
+Use:
 
-Append a **new Issue #1 comment** for routine capture. Comments are the concurrency-safe intake log for parallel chats.
+> **Observe → Diagnose → Shape → Contract → Build → Verify → Consolidate**
 
-The Issue #1 body is the consolidated unresolved snapshot. Rewrite the body only during an explicit consolidation pass, after first reading the latest body and all newer comments. This avoids two parallel chats overwriting one another.
+- **Observe:** current behavior, user/device evidence, repo state, open PRs, relevant research.
+- **Diagnose:** find the root class of problem before changing code.
+- **Shape:** choose the smallest coherent solution; prefer deleting complexity over compensating around it.
+- **Contract:** for nontrivial work, state the problem, success conditions, non-goals, ownership, and validation needed in the working PR/issue/plan. Do not create a permanent spec for every pass.
+- **Build:** change the shared primitive/rule first when the defect is shared; avoid scattered cosmetic patches.
+- **Verify:** static/behavior tests, representative responsive checks, physical-device validation where visual/mobile behavior matters, and real-project validation where product logic matters.
+- **Consolidate:** move durable conclusions to the correct authority, remove superseded active wording/code, and leave unresolved durable items in the Continuity Buffer.
 
-Good candidates:
-- a newly discovered real-device defect/pattern
-- a new cross-app constraint
-- a durable process/architecture decision not yet promoted
-- a meaningful conflict between Lab and an accepted standard
-- a product-boundary decision that affects future repos
+Automated browser checks do not equal physical-device approval.
 
-Do not persist:
-- jokes
-- every brainstorm option
-- already-canonical rules
-- immediately rejected ideas
-- low-level implementation details already committed/tested
+## Information ownership
+
+Classify durable information before storing it:
+- **Global** → Babel Truth
+- **App-local** → owning app repo
+- **Experimental** → Babel Lab / experiment authority
+- **Unresolved** → Babel Continuity Buffer
+
+Truth owns cross-app foundations, shared process, repo roles, semantic contracts, and major architectural decisions. App repos own their product behavior/runtime/data/specs. Lab owns experiments only.
+
+> **Lab is evidence, never authority.**
+
+## Contradictions
+
+Active authority should contain **one current truth**.
+
+When rule B replaces rule A:
+1. update current authority to B
+2. remove/rewrite A anywhere it still presents as current
+3. update tests/guards that protect A
+4. leave Git history alone
+5. create/supersede a decision record only when the architectural reasoning is important enough to preserve explicitly
+
+Do not solve contradiction by accumulating qualifiers forever.
+
+## Continuity
+
+Use Issue #1 as the lightweight unresolved buffer.
+
+Persist before reply when a new fact is both durable and unresolved and losing the chat would change future work. Normal capture is a **new Issue #1 comment**. The issue body is the consolidated unresolved snapshot and is rewritten only during an explicit consolidation after reading the body and all newer comments.
+
+Persist useful things such as:
+- real-device findings that change the next contract
+- new architecture/process/product boundaries
+- meaningful conflicts between experiment and authority
+- durable unresolved questions
+
+Do not persist jokes, every brainstorm option, already-canonical rules, immediately rejected ideas, or low-level implementation detail already preserved in code/tests/PR history.
 
 ## Parallel work
 
-Parallel chats are safe when they own different repositories or independent durable surfaces.
+Before any durable write, re-read current target state and relevant open PRs. If another chat already owns the same branch/file/PR/surface, reconcile current state before writing.
 
-Before writing to a repo/branch/file/PR, re-read its current state and relevant open PRs. If another chat already owns the same durable surface, do not write from stale state; reconcile first or let the owning lane finish.
+Truth changes do not silently mutate adopters. Each app/Lab remains pinned to the immutable Truth commit it last reconciled against until an explicit adoption pass.
 
-Truth updates do not automatically mutate adopters. Apps stay pinned to their reconciled Truth commit until an explicit adoption pass.
+## Major decisions
 
-## Promotion and cleanup
+`decisions/` is for architecturally significant decisions only. Accepted decision records remain historical evidence; if a decision changes, supersede it rather than rewriting history.
 
-When an unresolved item matures:
+## Repository map
 
-- global rule → promote to the correct Truth authority
-- app-local rule → promote to the owning app authority
-- experiment → retain in Lab with explicit experimental status
-- rejected/superseded → remove from active buffer
+- `START_HERE.md` — authority/routing/current cross-app sequence
+- `AGENTS.md` — these operating rules
+- `FOUNDATIONS.md` — shared product/design/interaction defaults
+- `registry/apps.json` — current repo roles and explicit Truth adoption refs
+- `decisions/` — major architectural decision history
+- `templates/BABEL_TRUTH.md` — adopter pointer template
+- Issue #1 — unresolved durable continuity
 
-During consolidation, resolve relevant new buffer comments into one of those outcomes, then refresh the Issue #1 body to the current unresolved snapshot. After promotion, remove duplicated active wording from the body and from any old current-authority location. Git/GitHub history remains the archive.
-
-## Conflict reconciliation
-
-When an app/Lab rule conflicts with Truth, classify before changing anything:
-
-1. **Stale divergence** — adopter should update to Truth.
-2. **Intentional experiment** — divergence remains because the experiment is testing an alternative.
-3. **Potential upstream improvement** — do not overwrite; surface the conflict and decide whether Truth should change first.
-4. **App-local exception** — Truth is not actually the right owner; preserve local behavior and clarify the boundary.
-
-## Scope ownership
-
-- `PRODUCT_PRINCIPLES.md` — cross-app product philosophy and boundaries
-- `DESIGN.md` — transferable interaction/design foundations
-- `PROCESS.md` — iteration, continuity, adoption, contradiction workflow
-- `registry/apps.json` — current repo/app roles and reconciliation metadata
-- `decisions/` — major architectural decisions only
-- Issue #1 body — consolidated unresolved snapshot
-- Issue #1 comments — append-only unresolved intake from parallel chats
+Git/GitHub history is the archive. Do not keep dead documentation active merely for history.
 
 ## Definition of done
 
-A Truth change is not done until:
-- its ownership is correct
-- active contradictions are removed or explicitly scoped
-- affected app/Lab adoption needs are identified
-- the Continuity Buffer is reconciled when appropriate
-- the handoff/read order remains coherent
+A Babel change is not done until:
+- ownership is correct
+- current contradictions are removed or intentionally scoped
+- relevant research/evidence has been considered when material
+- tests/guards and handoff agree with the new rule
+- affected adopter implications are understood
+- unresolved durable findings are captured or resolved
+- dead/replaced active documentation is removed rather than left to drift
