@@ -20,11 +20,11 @@
       "defaultBranch": "main",
       "runtime": true,
       "truthAdoption": {
-        "status": "reconciliation required",
-        "truthCommit": "8862c5367691f618fe0eea9e166b7cfffee54c77",
-        "adoptionMergeCommit": "f512b90065c58a2426e79e4a99941a22b22fe35e"
+        "status": "reconciled",
+        "truthCommit": "df8b1c25c3148d4376de31fe56cf24b13fc9cf77",
+        "adoptionMergeCommit": "cdff2454d5f8990b8a27326e04bfaae2683dfc60"
       },
-      "notes": "Owns FIRE production runtime, successor shell, FIRE-specific doctrine/specs/data/tests. V6 remains production. The G7 shell is explicitly frozen at approved runtime commit 4a258c5170dd1d96dcbc0f2b0a9c35b283cec489; FIRE Core breadboarding is unblocked. FIRE must explicitly adopt the newer Truth shell promotion before its pointer is called reconciled."
+      "notes": "Owns FIRE production runtime, frozen successor shell, FIRE-specific doctrine/specs/data/tests. V6 remains production. G7 is 10/10 Locked and Frozen; approved shell runtime anchor is 4a258c5170dd1d96dcbc0f2b0a9c35b283cec489. FIRE Core breadboarding is unblocked."
     },
     {
       "name": "Babel Lab",
@@ -38,7 +38,7 @@
         "truthCommit": "8862c5367691f618fe0eea9e166b7cfffee54c77",
         "adoptionMergeCommit": "e4889afde12b3ad79f5640dac5f8e1beb5841e9e"
       },
-      "notes": "Lab is evidence, never authority. Active Fire/World experiments remain isolated from production runtime/data; there is no active full FIRE shell replica. Its provisional generic chrome should reconcile to the newly promoted Babel shell in a separate bounded pass, without blocking FIRE Core."
+      "notes": "Lab is evidence, never authority. Active Fire/World experiments remain isolated from production runtime/data; there is no active full FIRE shell replica. Merge d8eb4d7a6248a99e09417515c8ca8e3b8fdd42d7 acknowledges the frozen shell baseline but deliberately leaves Lab pinned to its last fully reconciled Truth until a bounded generic-chrome reconciliation is completed. That work does not block FIRE Core."
     },
     {
       "name": "Babel World",
