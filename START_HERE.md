@@ -43,6 +43,8 @@ Classify durable information before storing it:
 
 A World prototype may live in Lab. Lab itself is not the World product.
 
+A real product may also use a clearly bounded Lab lane to audition **unproven interaction behavior** without moving product ownership. ADR 0006 governs that boundary: doctrine, canonical behavior, runtime/data, and promoted implementation remain in the owning product; Lab owns only the disposable specimen until deliberate promotion.
+
 ## Lab boundary
 
 > **Lab is evidence, never authority.**
@@ -51,9 +53,11 @@ Lab may contain contradictory styles, interactions, and hypotheses. Another prod
 
 Default evidence path when a Lab experiment is useful:
 
-**bounded experiment → owning-product candidate → owning-product physical/real-use validation → genuinely transferable rule promoted to Truth**
+**owning-product doctrine/question → bounded Lab experiment → physical/real-use validation → owning-product candidate/promotion → genuinely transferable rule promoted to Truth**
 
-A Lab step is optional.
+A Lab step is optional. If the question already depends on real owning-product runtime/data/navigation relationships, work in the owning product instead.
+
+The Lab **Shell Gallery** is a living visual/device-testable proving environment for generic shared-UI roles and candidates. It is distinct from an owning product's historical certification environment, such as FIRE's frozen G7 Shell Test. Presence in the Gallery does not make a pattern canonical; Truth owns cross-app promotion.
 
 ## Adoption model
 
@@ -75,13 +79,16 @@ Do not build a speculative universal component library. Share validated semantic
 
 ADR 0005 owns the initial cross-app context/handoff contract. Specialist products remain independently useful; context may follow the work across products without copying specialist internals or re-asking settled decisions. Prove the semantic fields through real flows before designing a universal Babel data model or backend.
 
+ADR 0006 owns bounded Lab incubation for existing products. It permits cheap/disposable interaction auditions while preserving one real product owner and defines concurrency expectations for shared Lab surfaces.
+
 ## Current cross-app sequence
 
 1. **FIRE G7 shell is frozen.** The owning-product runtime that received final explicit Babel approval is FIRE commit `4a258c5170dd1d96dcbc0f2b0a9c35b283cec489`. The ten-category certification gate is complete; V6 remains production until a separate deliberate promotion decision.
-2. **The validated generic shell is now shared Truth.** `FOUNDATIONS.md` owns the transferable Babel shell baseline; ADR 0004 records why it was promoted. FIRE fixture workflow/copy and FIRE Core product architecture remain local and were not promoted.
-3. **FIRE Core is unblocked.** FIRE may begin end-to-end breadboarding from `FIRE_CORE.md`, then build the thinnest believable spine and validate it on real projects. As that journey is shaped, identify what FIRE must know to guide each decision and which resulting facts genuinely matter outside FIRE; do not design World inside FIRE.
-4. **Cross-app context is now an explicit architecture concern, not an implementation prerequisite.** ADR 0005 defines the boundary. A future bounded experiment should prove one real FIRE → World → FIRE context loop before shared storage/schema infrastructure is standardized.
-5. **Lab reconciliation is a separate parallel lane.** Lab may adopt this newer Truth and reconcile its provisional generic chrome to the shared shell while preserving Fire/World experiment identity. Lab reconciliation does not block FIRE Core.
-6. **World remains an experiment/concept until its product job earns a real product repo.** Do not create ecosystem products to fill conceptual slots.
+2. **The validated generic shell is shared Truth.** `FOUNDATIONS.md` owns the transferable Babel shell baseline; ADR 0004 records why it was promoted. FIRE fixture workflow/copy and FIRE Core product architecture remain FIRE-local and were not promoted.
+3. **FIRE Core remains owned by FIRE.** FIRE doctrine, canonical behavior, runtime/data, and promoted implementation stay in `babel-fire`. Genuinely unproven FIRE Core interaction slices may be auditioned under a clearly labeled `babel-lab/fire/core/**` lane with fake/local state, then deliberately promoted back into FIRE only after physical/real-use evidence. FIRE's historical G7 Shell Test remains frozen certification evidence and is not moved to Lab.
+4. **Cross-app context is an explicit architecture concern, not an implementation prerequisite.** ADR 0005 defines the boundary. A future bounded experiment should prove one real FIRE → World → FIRE context loop before shared storage/schema infrastructure is standardized.
+5. **Lab has a separate shared-UI proving role.** Its Shell Gallery may evolve generic candidates under explicit Proven/Candidate/Experimental status while Truth remains canonical and no universal shared runtime/package is assumed.
+6. **Parallel product lanes must respect ownership.** FIRE- and WORLD-specific Lab paths may advance independently when disjoint; root/shared/shell/Truth-pointer/cross-cutting-CI surfaces are shared and require current-state/open-PR reconciliation before writes. Do not let one lane silently rewrite another lane's product logic.
+7. **World remains an experiment/concept until its product job earns a real product repo.** Do not create ecosystem products to fill conceptual slots.
 
 The owning repo's current handoff always controls its exact build/PR/next-step state.
