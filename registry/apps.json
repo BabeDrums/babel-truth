@@ -10,7 +10,7 @@
       "status": "active",
       "defaultBranch": "main",
       "runtime": false,
-      "notes": "Owns transferable foundations, shared operating rules, semantic contracts, registry, and major architecture decisions."
+      "notes": "Owns transferable foundations, shared operating rules, semantic contracts, registry, and major architecture decisions. ADR 0004 names the frozen FIRE G7 runtime as the canonical implementation reference for same-role generic Babel shell behavior without creating a universal runtime component dependency."
     },
     {
       "name": "Babel FIRE",
@@ -35,10 +35,10 @@
       "runtime": false,
       "truthAdoption": {
         "status": "reconciled",
-        "truthCommit": "526ca70990b1d8b0c92fead9f96aa79356048e2a",
-        "adoptionMergeCommit": "6a414bbcfb98e9af96e6290cd9d27edc5abe66a8"
+        "truthCommit": "bbd4f970709d5c207dca2a5a809dab46be09e1ec",
+        "adoptionMergeCommit": "90040d84c734009547ddd9606aff6fbc976648d9"
       },
-      "notes": "Lab is evidence, never authority. Active Fire/World experiments remain isolated from production runtime/data; there is no active full FIRE shell replica. Generic Lab chrome was reconciled to the validated Babel shell baseline in merge 46ff4a9a64578162af0ad30daea8439f04056830 and deployed successfully. Lab is now cleared to run the bounded WORLD Context Loop v0 experiment without turning the sandbox itself into World."
+      "notes": "Lab is evidence, never authority. Experiments remain isolated from production runtime/data. Lab now acts as a reference consumer of the frozen Babel shell for generic UI roles rather than maintaining a parallel generic design system; experiment-specific expression remains local. WORLD Phase 1 remains a bounded Lab audition and does not yet justify a standalone WORLD repository."
     },
     {
       "name": "Babel World",
@@ -47,7 +47,7 @@
       "status": "concept only",
       "runtime": false,
       "truthAdoption": "not applicable",
-      "notes": "World experiments currently live under babel-lab/world/. A real World product earns its own repo later; Babel Lab itself does not become World."
+      "notes": "WORLD Phase 1 currently lives under babel-lab/world/context-loop/. A real WORLD product earns its own repo only after the bounded orientation/decision slice proves independent value through physical use."
     }
   ]
 }
