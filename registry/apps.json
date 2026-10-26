@@ -21,10 +21,10 @@
       "runtime": true,
       "truthAdoption": {
         "status": "reconciled",
-        "truthCommit": "68229103cd199cd9474307e0ac73e254f16e915a",
-        "adoptionMergeCommit": "77a9baf87899d66874dff5714a121e894e478526"
+        "truthCommit": "9f6a4d5b65456c3df807955f947708e1f1134d99",
+        "adoptionMergeCommit": "e0d17756664471c7819f2294845e00116e90390d"
       },
-      "notes": "Owns FIRE production runtime, frozen successor shell, FIRE-specific doctrine/specs/data/tests and promoted implementation. V6 remains production. G7 is 10/10 Locked and Frozen; approved shell runtime anchor is 4a258c5170dd1d96dcbc0f2b0a9c35b283cec489. FIRE remains the sole product authority even when bounded unproven FIRE Core interaction slices are auditioned in Babel Lab."
+      "notes": "Owns FIRE production runtime, frozen successor shell, FIRE-specific doctrine/specs/data/tests and promoted implementation. V6 remains production. G7 is 10/10 Locked and Frozen; approved shell runtime anchor is 4a258c5170dd1d96dcbc0f2b0a9c35b283cec489. FIRE remains the sole product authority even when bounded unproven FIRE Core interaction slices are auditioned in Babel Lab. FIRE Core doctrine now reflects the Production Map + Active Focus + FIRE Loop model; Draft PR #99 remains seed/history for the first interaction audition rather than merge-ready runtime."
     },
     {
       "name": "Babel Lab",
