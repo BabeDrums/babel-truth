@@ -40,7 +40,7 @@ Shared foundations should reduce relearning and inconsistency without erasing th
 
 ## Validated Babel shell baseline
 
-FIRE G7 was the first owning product to physically validate a complete generic Babel shell and explicitly freeze it. The rules below are therefore shared defaults, not a mandate to copy FIRE screens or code.
+FIRE G7 was the first owning product to physically validate a complete generic Babel shell and explicitly freeze it. The rules below are therefore shared defaults, not a mandate to copy FIRE screens or product workflow.
 
 - **Calm scaffold.** Navigation/actions occupy a stable toolbar row; page/project identity and quiet metadata compose below it rather than competing with the controls.
 - **Content before chrome.** Generic chrome recedes until a real decision, state, risk, or primary action earns emphasis.
@@ -53,7 +53,15 @@ FIRE G7 was the first owning product to physically validate a complete generic B
 - **Familiar first, signature second.** Commodity controls should be platform-legible and excellent. Distinctive Babel expression belongs where it improves the job rather than decorating routine UI.
 - **Tactile, not decorative.** Character comes from hierarchy, rhythm, proportion, material, motion, and interaction—not gratuitous glow, gradients, borders, or metaphor.
 
-This baseline is intentionally semantic and compositional. Do not extract a universal Babel component library from one product implementation; shared code remains unearned until multiple real products prove the same semantics and implementation genuinely need reuse.
+### Canonical shell reference
+
+The frozen FIRE G7 runtime at commit `4a258c5170dd1d96dcbc0f2b0a9c35b283cec489` is the canonical implementation reference for the generic roles above.
+
+When a new Babel surface uses the same semantic role, start from that proven reference rather than inventing a parallel interpretation of the prose. In practice this means reconciling generic page frame, toolbar geometry, title hierarchy, shared surfaces, common actions, grouped rows, fields/controls, temporary UI, responsive behavior, focus/accessibility, and motion against the frozen reference before adding product-specific expression.
+
+This does **not** mean copying FIRE workflow, fixture content, music semantics, or FIRE Core architecture. It also does not create a cross-repository runtime dependency. A product may deliberately diverge when its job requires it, but generic shell drift should be an explicit decision rather than an accidental consequence of rebuilding the same role from scratch.
+
+This baseline remains intentionally compositional rather than a universal component package. Shared code is still unearned until multiple real products prove that the same component semantics and implementation genuinely need reuse.
 
 ## Hierarchy
 
@@ -158,4 +166,4 @@ Adapt presentation through width, density, column count, modal form, and optiona
 
 Do not build a speculative universal Babel component library.
 
-Share principles, semantic patterns, small foundation tokens, process, and contracts first. Extract shared implementation only after at least two real products prove that the same component semantics and code genuinely need reuse.
+Share principles, semantic patterns, small foundation tokens, process, contracts, and the canonical frozen reference first. Consumers may port/reconcile against that reference without creating a runtime dependency. Extract shared implementation only after at least two real products prove that the same component semantics and code genuinely need reuse.
