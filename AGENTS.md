@@ -94,6 +94,23 @@ Persist useful things such as:
 
 Do not persist jokes, every brainstorm option, already-canonical rules, immediately rejected ideas, or low-level implementation detail already preserved in code/tests/PR history.
 
+## Conversation closeout / handoff
+
+When Babel asks to close out a chat, prepare a fresh-chat handoff, or make the current conversation safely disposable, follow `CHAT_CLOSEOUT.md`.
+
+The closeout goal is **durable continuity, not a transcript summary**:
+- refresh current Truth / owning-repo state first
+- sweep the conversation for materially important state not yet persisted
+- classify it by correct owner
+- persist only what is genuinely missing
+- label unfinished PR/branch/physical-review state accurately
+- avoid starting new product work during closeout unless continuity repair requires it
+- only then generate a compact next-chat handoff
+
+A handoff prompt is a routing layer, not authority. Canonical product/process state belongs in the repos; durable unresolved state belongs in the Continuity Buffer. Small **handoff-only context** may remain in the prompt when it materially helps the next chat but would be wrong to canonize.
+
+A closeout is not complete if the next chat would still need the old chat to know what materially happened.
+
 ## Parallel work
 
 Before any durable write, re-read current target state and relevant open PRs. If another chat already owns the same branch/file/PR/surface, reconcile current state before writing.
@@ -103,6 +120,10 @@ Product-specific lanes may proceed in parallel when their owned files/surfaces a
 For Babel Lab, treat root/shared shell/Truth-pointer/cross-cutting CI surfaces as shared unless current Lab authority says otherwise. FIRE-specific and WORLD-specific experiment paths may advance independently when disjoint, but changes to shared Lab chrome, `shared/**`, `shell/**`, root navigation, adoption pointers, or tests spanning multiple experiments require a fresh main/open-PR reconciliation first.
 
 If a product-specific experiment discovers a shared need, classify it instead of reaching across ownership casually: owning-product behavior returns to the owning app; generic shared semantics become a Truth candidate; unresolved cross-lane conflicts go to Issue #1.
+
+Append-only Issue #1 comments are the preferred concurrency-safe mechanism for unresolved cross-lane continuity. Do not rewrite the Issue #1 body from routine parallel work.
+
+Before merging, repeat the current-main/open-PR overlap check. A branch that was safe when created may no longer be safe at merge time.
 
 Truth changes do not silently mutate adopters. Each app/Lab remains pinned to the immutable Truth commit it last reconciled against until an explicit adoption pass.
 
@@ -122,6 +143,7 @@ Babel has standing permission to merge a Truth PR when the diff has been reviewe
 
 - `START_HERE.md` — authority/routing/current cross-app sequence
 - `AGENTS.md` — these operating rules
+- `CHAT_CLOSEOUT.md` — reusable conversation-closeout / fresh-chat handoff protocol
 - `FOUNDATIONS.md` — shared product/design/interaction defaults
 - `registry/apps.json` — current repo roles and explicit Truth adoption refs
 - `decisions/` — major architectural decision history

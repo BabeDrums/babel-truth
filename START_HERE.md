@@ -13,6 +13,8 @@ This repository is the first read for **cross-app Babel authority**. It does not
 5. Babel Continuity Buffer Issue #1 body + newer comments for relevant unresolved durable findings
 6. then the owning app/Lab handoff and code
 
+Read `CHAT_CLOSEOUT.md` when Babel asks to close out a conversation, prepare a fresh-chat handoff, or make the current chat safely disposable.
+
 Do not read every historical file by default. Pull deeper context only when the task needs it.
 
 ## Authority model
@@ -72,6 +74,8 @@ Issue #1 is the unresolved durable buffer.
 Normal persist-before-reply capture is append-only through **new comments**. The issue body is the consolidated current snapshot and is rewritten only during explicit consolidation after reading the body and all newer comments.
 
 Do not use it as a transcript archive.
+
+For conversation migration, use `CHAT_CLOSEOUT.md`: persist missing durable state first, then make the handoff prompt a small routing layer rather than a second authority store.
 
 ## Shared-system boundary
 
