@@ -35,10 +35,10 @@
       "runtime": false,
       "truthAdoption": {
         "status": "reconciled",
-        "truthCommit": "bbd4f970709d5c207dca2a5a809dab46be09e1ec",
-        "adoptionMergeCommit": "90040d84c734009547ddd9606aff6fbc976648d9"
+        "truthCommit": "964f09a5dbf2b1c55e8b5d7e4ec83941e03b4aef",
+        "adoptionMergeCommit": "5c0c0be8f4fd9398fa3406e977c445ead318a066"
       },
-      "notes": "Lab is evidence, never authority. Experiments remain isolated from production runtime/data. Lab consumes the frozen Babel shell reference for generic UI roles, hosts a separate living Shell Gallery for shared-UI candidates, and may host clearly bounded owning-product auditions such as FIRE Core under fake/local state. Product doctrine/canonical behavior/runtime/data remain with the owning app. WORLD Phase 1 remains a bounded Lab audition and does not yet justify a standalone WORLD repository."
+      "notes": "Lab is evidence, never authority. Experiments remain isolated from production runtime/data. Lab consumes the frozen Babel shell reference for generic UI roles, hosts a separate living Shell Gallery for shared-UI candidates, and may host clearly bounded owning-product auditions such as FIRE Core under fake/local state. Product doctrine/canonical behavior/runtime/data remain with the owning app. WORLD Phase 1 remains a bounded Lab audition and does not yet justify a standalone WORLD repository. Lab now also adopts the shared conversation-closeout protocol so fresh-chat handoffs persist durable state before relying on prompts."
     },
     {
       "name": "Babel World",
