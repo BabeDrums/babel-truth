@@ -1,142 +1,88 @@
 # Babel Conversation Closeout Protocol
 
-Use this when Babel asks to close out a chat, prepare a handoff, move work into a fresh chat, or otherwise make the current conversation safely disposable.
+Use this when Babel asks to close a chat, prepare a fresh-chat handoff, or make the current conversation safely disposable.
 
-The goal is **not** to create a giant transcript summary. The goal is to make the repositories and Continuity Buffer sufficient for the next chat to reconstruct the real project state with minimal prompt-only context.
+> **If losing the current chat would materially change future work, persist the important state before leaving it.**
 
-## Core rule
+The goal is durable continuity, not a transcript summary. A handoff prompt is routing/context, never a substitute for repository authority.
 
-> **If losing the current chat would materially change future work, the important state must be persisted before the chat is abandoned.**
+## 1. Refresh current reality
 
-A handoff prompt is routing/context, not a substitute for durable project state.
+Before deciding what is missing, re-read:
+- Babel Truth `main`, relevant open PRs, and Issue #1 body + newer relevant comments
+- the owning app/Lab `main`, current handoff/authority, and relevant open PRs
+- adjacent repos only when they materially affect this lane
+- CI/deploy/physical-review state when it changes the next gate
 
-## 1. Refresh reality first
+If another lane is writing, identify its branch/PR and avoid overlapping durable surfaces until reconciled.
 
-Before deciding what is missing, re-read the current state that can supersede chat memory:
+## 2. Sweep and classify the conversation
 
-1. Babel Truth `main`, relevant open PRs, and the current Continuity Buffer body + newer relevant comments
-2. the owning app/Lab `main`, relevant authority/handoff files, and relevant open PRs
-3. any adjacent repo whose current state materially affects the lane
-4. current CI/deploy state when an unverified merge or physical-review gate matters
+Only capture material state that is not already durable. Give each item one primary home:
+- **Global/cross-app accepted** → Babel Truth
+- **Product-local accepted** → owning product
+- **Experiment-local accepted** → Babel Lab / experiment authority
+- **Durable unresolved** → new Issue #1 comment
+- **Handoff-only context** → final prompt only
+- **Transient/history** → do not persist
 
-If another chat/lane is actively writing, identify its branch/PR and avoid editing the same durable surface until the overlap is reconciled.
+Handoff-only context is useful collaboration framing that should travel once but would be wrong to canonize.
 
-## 2. Sweep the current conversation
+## 3. Persist only what is missing
 
-Review the conversation for materially important state that may not yet be durable. Do not assume every memorable discussion deserves storage.
+Before writing, verify the information is not already captured well enough.
 
-Classify each candidate into exactly one primary bucket:
+- update accepted rules in their owning authority
+- append unresolved durable findings as new Issue #1 comments
+- rewrite the Issue #1 body only during explicit consolidation
+- remove active contradictions when a new rule replaces an old one
+- keep tests/guards/handoff text aligned with accepted rules
+- preserve historical evidence in Git/PR history instead of duplicate active docs
 
-- **Global/cross-app accepted** → Babel Truth authority
-- **App-local accepted** → owning app authority
-- **Experimental accepted-for-the-experiment** → Babel Lab / experiment authority
-- **Durable unresolved** → a new Babel Truth Issue #1 comment
-- **Handoff-only context** → final handoff prompt only
-- **Transient/history** → do not persist; Git/chat history is enough
+Do **not** persist jokes, every brainstorm, rejected options, already-canonical rules, low-level details already preserved by code/tests/PRs, or archival chat summaries.
 
-Examples of handoff-only context include a small collaboration nuance, current review emphasis, or temporary framing that helps the next chat work effectively but would be wrong to canonize as product authority.
+## 4. Make unfinished work legible
 
-## 3. Persist only what is genuinely missing
+Record only what the next chat actually needs to know about provisional work:
+- PR/branch and state (`Draft`, merge-ready, blocked, superseded, seed/history)
+- exact validation/physical-review gate
+- important non-goals or “do not promote yet” boundaries
 
-Before writing, check whether the information is already captured well enough.
+Substantial code does not become canonical merely because it exists.
 
-Do not duplicate the same rule into several repos merely to make it easier to find. Prefer the owning source and pointers/read order.
+## 5. Recheck concurrency before merge
 
-When writing:
+Before every closeout write—and again before merge—refresh current `main` and relevant open PRs/changed files. Parallel lanes may continue when disjoint; serialize shared-surface overlap.
 
-- update accepted rules in the correct authority rather than leaving them only as unresolved notes
-- append durable unresolved findings as a **new Issue #1 comment**
-- do not rewrite the Issue #1 body during routine closeout; body rewrite is an explicit consolidation task
-- remove or rewrite active contradictions when a new accepted rule supersedes an old one
-- update tests/guards/handoff text when the accepted rule they protect changes
-- preserve historical PR/commit evidence; do not keep obsolete active docs just for history
+Issue #1 comments are the preferred append-only mechanism for unresolved cross-lane continuity.
 
-Do not persist:
+## 6. Stop at continuity
 
-- jokes or emotional reactions that do not change work
-- every brainstorm alternative
-- already-canonical rules
-- immediately rejected ideas
-- low-level implementation detail already preserved in code/tests/PR history
-- long chat summaries whose only purpose is archival duplication
+Do not start a new feature/design pass during closeout unless it is strictly necessary to make current state truthful or recoverable. Preserve the next executable step instead.
 
-## 4. Preserve unfinished work explicitly
-
-A closeout must make unmerged or provisional work legible.
-
-Record, where relevant:
-
-- open PR number/title/state (`Draft` vs merge-ready)
-- whether the branch is seed material, blocked, superseded, awaiting physical review, or safe to merge
-- the exact next validation gate
-- important non-goals / “do not accidentally promote this” boundaries
-
-Never make an unresolved PR look canonical merely because it contains substantial work.
-
-## 5. Concurrency-safe closeout
-
-Parallel chats are allowed when their write scopes are disjoint.
-
-Before any durable write during closeout:
-
-1. refresh the current target branch
-2. inspect relevant open PRs and, when needed, changed filenames
-3. confirm the current lane owns the target surface
-4. if another lane overlaps, serialize/reconcile that shared change instead of racing it
-
-Append-only Issue #1 comments are the preferred concurrency-safe place for unresolved cross-lane continuity.
-
-Before merging a closeout PR, repeat the refresh/open-PR check. A branch that was safe when created may no longer be safe at merge time.
-
-## 6. Do not start a new product pass during closeout
-
-Closeout is for continuity repair, contradiction cleanup, and handoff readiness.
-
-Do not use it as an excuse to begin a new feature/design pass unless that change is strictly necessary to make current state truthful or recoverable.
-
-If implementation work remains, preserve the next executable step instead of completing it opportunistically.
-
-## 7. Closeout report
-
-After persistence is complete, report concisely:
-
-- what important state was already safely captured
+After persistence, report concisely:
+- what was already captured
 - what was newly persisted and where
-- what was intentionally left out and why
-- current open PR/branch/physical-review gates that matter
-- the exact best next executable step
-- whether the lane is now safe to continue from repositories alone
+- what was intentionally omitted
+- open/provisional/physical-review gates
+- best next executable step
+- whether repositories + Issue #1 are sufficient without the old chat
 
-If it is **not** safe, say exactly what remains chat-only and why it could not be persisted.
+If not, say exactly what remains chat-only and why.
 
-## 8. Generate the next-chat handoff only after closeout
+## Fresh-chat handoff
 
-A fresh-chat prompt should be a **routing layer**, not another authority file.
-
-Prefer a compact prompt that tells the next chat:
-
+Generate the handoff only **after** closeout is complete. Keep it small:
 - project-facing name (`Babel`)
-- which lane it owns
+- lane ownership
 - repo/read order
-- to trust newer repo state over stale hashes in the prompt
-- current write-scope / concurrency rails
-- current immediate gate or next executable question
-- any truly necessary handoff-only context that did not belong in authority
+- instruction to trust newer repo state over prompt hashes/details
+- write-scope/concurrency rails
+- immediate gate or next executable question
+- only truly necessary handoff-only context
 
-Do not copy large canonical sections into the prompt when the next chat can read them directly from the repos.
+Do not paste canonical product doctrine into the prompt when the next chat can read it from the repos.
 
-If exact hashes are included, treat them as last-known anchors only and explicitly instruct the next chat to follow newer documented state.
+## Done
 
-## Definition of closeout done
-
-A conversation is safely closed when:
-
-- accepted durable state has a correct owner
-- unresolved durable state is captured
-- open/provisional work is accurately labeled
-- active contradictions relevant to the lane are removed or explicitly scoped
-- concurrency/ownership hazards are known
-- the next executable gate is clear
-- a fresh chat can reconstruct the work from repositories + Continuity Buffer, with only a small amount of handoff-only context if needed
-
-At that point, the old conversation is useful history—not required operational memory.
+A chat is safely disposable when accepted state has the right owner, unresolved state is captured, provisional work is accurately labeled, concurrency hazards are known, the next gate is clear, and a fresh chat can reconstruct the work from repositories + Issue #1 with at most a small handoff prompt.
