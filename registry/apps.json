@@ -21,10 +21,10 @@
       "runtime": true,
       "truthAdoption": {
         "status": "reconciled",
-        "truthCommit": "df8b1c25c3148d4376de31fe56cf24b13fc9cf77",
-        "adoptionMergeCommit": "cdff2454d5f8990b8a27326e04bfaae2683dfc60"
+        "truthCommit": "68229103cd199cd9474307e0ac73e254f16e915a",
+        "adoptionMergeCommit": "77a9baf87899d66874dff5714a121e894e478526"
       },
-      "notes": "Owns FIRE production runtime, frozen successor shell, FIRE-specific doctrine/specs/data/tests. V6 remains production. G7 is 10/10 Locked and Frozen; approved shell runtime anchor is 4a258c5170dd1d96dcbc0f2b0a9c35b283cec489. FIRE Core breadboarding is unblocked."
+      "notes": "Owns FIRE production runtime, frozen successor shell, FIRE-specific doctrine/specs/data/tests and FIRE Knowledge. V6 remains production. G7 is 10/10 Locked and Frozen; approved shell runtime anchor is 4a258c5170dd1d96dcbc0f2b0a9c35b283cec489. FIRE Core breadboarding is unblocked and now explicitly observes ADR 0005's cross-app context boundary while remaining independently usable."
     },
     {
       "name": "Babel Lab",
