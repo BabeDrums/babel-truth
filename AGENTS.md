@@ -57,6 +57,8 @@ Truth owns cross-app foundations, shared process, repo roles, semantic contracts
 
 > **Lab is evidence, never authority.**
 
+ADR 0006 permits a bounded Lab experiment for an existing real product without transferring product ownership. The owning app still owns doctrine, canonical behavior, runtime/data, and promoted implementation. Prototype behavior/code must be deliberately promoted; it is never canonical merely because it exists in Lab.
+
 ## Conflict classification
 
 When an app/Lab rule differs from Truth, classify it before editing:
@@ -95,6 +97,12 @@ Do not persist jokes, every brainstorm option, already-canonical rules, immediat
 ## Parallel work
 
 Before any durable write, re-read current target state and relevant open PRs. If another chat already owns the same branch/file/PR/surface, reconcile current state before writing.
+
+Product-specific lanes may proceed in parallel when their owned files/surfaces are genuinely disjoint. Shared surfaces are a stricter concurrency boundary: one lane must not silently reinterpret or overwrite a shared surface while another lane is changing it.
+
+For Babel Lab, treat root/shared shell/Truth-pointer/cross-cutting CI surfaces as shared unless current Lab authority says otherwise. FIRE-specific and WORLD-specific experiment paths may advance independently when disjoint, but changes to shared Lab chrome, `shared/**`, `shell/**`, root navigation, adoption pointers, or tests spanning multiple experiments require a fresh main/open-PR reconciliation first.
+
+If a product-specific experiment discovers a shared need, classify it instead of reaching across ownership casually: owning-product behavior returns to the owning app; generic shared semantics become a Truth candidate; unresolved cross-lane conflicts go to Issue #1.
 
 Truth changes do not silently mutate adopters. Each app/Lab remains pinned to the immutable Truth commit it last reconciled against until an explicit adoption pass.
 

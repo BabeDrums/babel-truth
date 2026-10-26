@@ -10,7 +10,7 @@
       "status": "active",
       "defaultBranch": "main",
       "runtime": false,
-      "notes": "Owns transferable foundations, shared operating rules, semantic contracts, registry, and major architecture decisions. ADR 0004 names the frozen FIRE G7 runtime as the canonical implementation reference for same-role generic Babel shell behavior without creating a universal runtime component dependency."
+      "notes": "Owns transferable foundations, shared operating rules, semantic contracts, registry, and major architecture decisions. ADR 0004 names the frozen FIRE G7 runtime as the canonical implementation reference for same-role generic Babel shell behavior without creating a universal runtime component dependency. ADR 0006 permits bounded Lab incubation for unproven owning-product interaction behavior while preserving app ownership."
     },
     {
       "name": "Babel FIRE",
@@ -24,7 +24,7 @@
         "truthCommit": "68229103cd199cd9474307e0ac73e254f16e915a",
         "adoptionMergeCommit": "77a9baf87899d66874dff5714a121e894e478526"
       },
-      "notes": "Owns FIRE production runtime, frozen successor shell, FIRE-specific doctrine/specs/data/tests and FIRE Knowledge. V6 remains production. G7 is 10/10 Locked and Frozen; approved shell runtime anchor is 4a258c5170dd1d96dcbc0f2b0a9c35b283cec489. FIRE Core breadboarding is unblocked and now explicitly observes ADR 0005's cross-app context boundary while remaining independently usable."
+      "notes": "Owns FIRE production runtime, frozen successor shell, FIRE-specific doctrine/specs/data/tests and promoted implementation. V6 remains production. G7 is 10/10 Locked and Frozen; approved shell runtime anchor is 4a258c5170dd1d96dcbc0f2b0a9c35b283cec489. FIRE remains the sole product authority even when bounded unproven FIRE Core interaction slices are auditioned in Babel Lab."
     },
     {
       "name": "Babel Lab",
@@ -38,7 +38,7 @@
         "truthCommit": "bbd4f970709d5c207dca2a5a809dab46be09e1ec",
         "adoptionMergeCommit": "90040d84c734009547ddd9606aff6fbc976648d9"
       },
-      "notes": "Lab is evidence, never authority. Experiments remain isolated from production runtime/data. Lab now acts as a reference consumer of the frozen Babel shell for generic UI roles rather than maintaining a parallel generic design system; experiment-specific expression remains local. WORLD Phase 1 remains a bounded Lab audition and does not yet justify a standalone WORLD repository."
+      "notes": "Lab is evidence, never authority. Experiments remain isolated from production runtime/data. Lab consumes the frozen Babel shell reference for generic UI roles, hosts a separate living Shell Gallery for shared-UI candidates, and may host clearly bounded owning-product auditions such as FIRE Core under fake/local state. Product doctrine/canonical behavior/runtime/data remain with the owning app. WORLD Phase 1 remains a bounded Lab audition and does not yet justify a standalone WORLD repository."
     },
     {
       "name": "Babel World",
