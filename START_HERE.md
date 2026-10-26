@@ -73,12 +73,15 @@ Do not use it as a transcript archive.
 
 Do not build a speculative universal component library. Share validated semantics, principles, small foundation tokens, and contracts first. Extract shared implementation only after multiple real products prove the same code and meaning genuinely need reuse.
 
+ADR 0005 owns the initial cross-app context/handoff contract. Specialist products remain independently useful; context may follow the work across products without copying specialist internals or re-asking settled decisions. Prove the semantic fields through real flows before designing a universal Babel data model or backend.
+
 ## Current cross-app sequence
 
 1. **FIRE G7 shell is frozen.** The owning-product runtime that received final explicit Babel approval is FIRE commit `4a258c5170dd1d96dcbc0f2b0a9c35b283cec489`. The ten-category certification gate is complete; V6 remains production until a separate deliberate promotion decision.
 2. **The validated generic shell is now shared Truth.** `FOUNDATIONS.md` owns the transferable Babel shell baseline; ADR 0004 records why it was promoted. FIRE fixture workflow/copy and FIRE Core product architecture remain local and were not promoted.
-3. **FIRE Core is unblocked.** FIRE may begin end-to-end breadboarding from `FIRE_CORE.md`, then build the thinnest believable spine and validate it on real projects. Do not casually reopen frozen shell categories just because product content changes.
-4. **Lab reconciliation is a separate parallel lane.** Lab may adopt this newer Truth and reconcile its provisional generic chrome to the shared shell while preserving Fire/World experiment identity. Lab reconciliation does not block FIRE Core.
-5. **World remains an experiment/concept until its product job earns a real product repo.** Do not create ecosystem products to fill conceptual slots.
+3. **FIRE Core is unblocked.** FIRE may begin end-to-end breadboarding from `FIRE_CORE.md`, then build the thinnest believable spine and validate it on real projects. As that journey is shaped, identify what FIRE must know to guide each decision and which resulting facts genuinely matter outside FIRE; do not design World inside FIRE.
+4. **Cross-app context is now an explicit architecture concern, not an implementation prerequisite.** ADR 0005 defines the boundary. A future bounded experiment should prove one real FIRE → World → FIRE context loop before shared storage/schema infrastructure is standardized.
+5. **Lab reconciliation is a separate parallel lane.** Lab may adopt this newer Truth and reconcile its provisional generic chrome to the shared shell while preserving Fire/World experiment identity. Lab reconciliation does not block FIRE Core.
+6. **World remains an experiment/concept until its product job earns a real product repo.** Do not create ecosystem products to fill conceptual slots.
 
 The owning repo's current handoff always controls its exact build/PR/next-step state.
