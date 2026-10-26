@@ -10,7 +10,7 @@
       "status": "active",
       "defaultBranch": "main",
       "runtime": false,
-      "notes": "Owns transferable foundations, shared operating rules, semantic contracts, registry, and major architecture decisions. ADR 0004 names the frozen FIRE G7 runtime as the canonical implementation reference for same-role generic Babel shell behavior without creating a universal runtime component dependency. ADR 0006 permits bounded Lab incubation for unproven owning-product interaction behavior while preserving app ownership."
+      "notes": "Owns transferable foundations, shared operating rules, semantic contracts, registry, and major architecture decisions. ADR 0004 owns the shared Babel shell boundary, ADR 0005 the cross-app context boundary, and ADR 0006 bounded Lab incubation."
     },
     {
       "name": "Babel FIRE",
@@ -21,10 +21,10 @@
       "runtime": true,
       "truthAdoption": {
         "status": "reconciled",
-        "truthCommit": "9f6a4d5b65456c3df807955f947708e1f1134d99",
-        "adoptionMergeCommit": "e0d17756664471c7819f2294845e00116e90390d"
+        "truthCommit": "21cb7307f8a1306101d7761f11da79b44752e13b",
+        "adoptionMergeCommit": "fff5522702eea804d7ab09d42321f33cc1ff7396"
       },
-      "notes": "Owns FIRE production runtime, frozen successor shell, FIRE-specific doctrine/specs/data/tests and promoted implementation. V6 remains production. G7 is 10/10 Locked and Frozen; approved shell runtime anchor is 4a258c5170dd1d96dcbc0f2b0a9c35b283cec489. FIRE remains the sole product authority even when bounded unproven FIRE Core interaction slices are auditioned in Babel Lab. FIRE Core doctrine now reflects the Production Map + Active Focus + FIRE Loop model; Draft PR #99 remains seed/history for the first interaction audition rather than merge-ready runtime."
+      "notes": "Owns FIRE doctrine, production runtime/data, frozen successor shell, specs/tests, and promoted implementation. V6 remains production; G7 is 10/10 Locked and Frozen at runtime anchor 4a258c5170dd1d96dcbc0f2b0a9c35b283cec489. Current FIRE Core doctrine uses the Production Map + Active Focus + FIRE Loop model. The first unproven Core interaction is auditioned in Lab; closed PR #99 is seed/history only."
     },
     {
       "name": "Babel Lab",
@@ -35,19 +35,19 @@
       "runtime": false,
       "truthAdoption": {
         "status": "reconciled",
-        "truthCommit": "964f09a5dbf2b1c55e8b5d7e4ec83941e03b4aef",
-        "adoptionMergeCommit": "5c0c0be8f4fd9398fa3406e977c445ead318a066"
+        "truthCommit": "21cb7307f8a1306101d7761f11da79b44752e13b",
+        "adoptionMergeCommit": "f246c64b1e99947e2e9acc6d07ace9b11629fead"
       },
-      "notes": "Lab is evidence, never authority. Experiments remain isolated from production runtime/data. Lab consumes the frozen Babel shell reference for generic UI roles, hosts a separate living Shell Gallery for shared-UI candidates, and may host clearly bounded owning-product auditions such as FIRE Core under fake/local state. Product doctrine/canonical behavior/runtime/data remain with the owning app. WORLD Phase 1 remains a bounded Lab audition and does not yet justify a standalone WORLD repository. Lab now also adopts the shared conversation-closeout protocol so fresh-chat handoffs persist durable state before relying on prompts."
+      "notes": "Lab is evidence, never authority. It hosts Shell Gallery plus isolated Fire Lab and World Lab experiments using fake/local state by default. FIRE Core may audition bounded unproven interaction behavior here without moving product ownership. WORLD Phase 1 remains a Lab product audition and does not yet justify a standalone WORLD repository."
     },
     {
       "name": "Babel World",
       "repo": null,
-      "role": "future optional ecosystem hub product",
+      "role": "future optional artist-development and creative-context product",
       "status": "concept only",
       "runtime": false,
       "truthAdoption": "not applicable",
-      "notes": "WORLD Phase 1 currently lives under babel-lab/world/context-loop/. A real WORLD product earns its own repo only after the bounded orientation/decision slice proves independent value through physical use."
+      "notes": "WORLD Phase 1 lives under babel-lab/world/context-loop/. A real WORLD product earns its own repo only after physical use proves independent orientation/decision value beyond a single exact scenario."
     }
   ]
 }
