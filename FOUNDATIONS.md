@@ -38,6 +38,23 @@ Shared foundations should reduce relearning and inconsistency without erasing th
 - **Build the smallest believable whole.** Prove a thin end-to-end path before deeply polishing isolated screens.
 - **Real-world validation beats internal certainty.** Automated tests and browser simulation do not replace physical-device or real-project validation where those matter.
 
+## Validated Babel shell baseline
+
+FIRE G7 was the first owning product to physically validate a complete generic Babel shell and explicitly freeze it. The rules below are therefore shared defaults, not a mandate to copy FIRE screens or code.
+
+- **Calm scaffold.** Navigation/actions occupy a stable toolbar row; page/project identity and quiet metadata compose below it rather than competing with the controls.
+- **Content before chrome.** Generic chrome recedes until a real decision, state, risk, or primary action earns emphasis.
+- **Quiet material, full interaction.** Touch targets should generally stay about 44px or larger even when the visible button material is smaller/quieter inside that target.
+- **Parent owns the surface.** A grouped row, selection family, or split-action row owns its outer geometry and pressed/selected surface. Child targets keep distinct semantics without painting competing nested rectangles.
+- **Symbol placement is systematic.** Start from shared geometry, allow a small intrinsic optical metric only when the glyph itself needs one, then let the host/container place it consistently. Do not repair shared symbols with page-specific nudges.
+- **Related vs major rhythm is deliberate.** Use the shared spacing vocabulary. As a default shell rhythm, tightly related disclosure/control groups may use 12px separation while major conceptual groups and task-content-to-footer separation may use 24px; owning products may deliberately choose another value when evidence requires it.
+- **Ordinary text fields behave like ordinary text fields.** Preserve normal platform correction/spelling/predictive assistance unless the value genuinely requires specialized input semantics. Numeric or otherwise specialized fields keep the appropriate input mode rather than inheriting generic text behavior.
+- **Temporary UI may adapt form, not meaning.** Compact layouts may use a bottom sheet while regular width uses a centered dialog/card; the semantic content, action hierarchy, and task consequence remain the same.
+- **Familiar first, signature second.** Commodity controls should be platform-legible and excellent. Distinctive Babel expression belongs where it improves the job rather than decorating routine UI.
+- **Tactile, not decorative.** Character comes from hierarchy, rhythm, proportion, material, motion, and interaction—not gratuitous glow, gradients, borders, or metaphor.
+
+This baseline is intentionally semantic and compositional. Do not extract a universal Babel component library from one product implementation; shared code remains unearned until multiple real products prove the same semantics and implementation genuinely need reuse.
+
 ## Hierarchy
 
 A Babel product should feel calm, deliberate, learnable, and human.
