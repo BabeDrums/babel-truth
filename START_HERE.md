@@ -38,6 +38,7 @@ Durable information has one primary owner:
 - `BabeDrums/babel-fire` — FIRE product and production owner
 - `BabeDrums/babel-lab` — disposable/prototype sandbox and incubator
 - **WORLD** — concept/product audition inside Lab; no standalone repo yet
+- **ARC** — distinct time/capacity-coordination product candidate; no standalone repo, runtime, or required UI yet
 
 Lab is evidence, never authority. ADR 0006 allows an existing product to audition bounded unproven interaction behavior in Lab without moving ownership. The owning product keeps doctrine, canonical behavior, runtime/data, and promoted implementation.
 
@@ -53,9 +54,10 @@ Do not build a universal component package, Babel-wide data model, backend, acco
 
 - FIRE **V6 remains production**.
 - FIRE **G7 shell is 10/10 Locked and Frozen**. Approved shell runtime anchor: `4a258c5170dd1d96dcbc0f2b0a9c35b283cec489`.
-- FIRE Core doctrine is owned by `babel-fire`; the first unproven Core interaction is meant to audition under `babel-lab/fire/core/**` before promoted implementation.
+- FIRE Core doctrine is owned by `babel-fire`. The current Lab specimen is the merged/deployed **top-of-product heartbeat** under `babel-lab/fire/core/**`; it supersedes the earlier V1/V2 interaction auditions and remains gated on physical iPhone review before any promotion into FIRE production.
 - Lab currently contains **Shell Gallery**, **Fire Lab**, and **World Lab**. Shared Lab surfaces are integration surfaces; product-local experiment paths may advance independently when disjoint.
 - WORLD remains an experiment/concept until physical use proves an independent product job strong enough to earn a repo.
+- ARC has earned a distinct candidate job — **Adapt → Reconcile → Coordinate** a person's commitments, responsibilities, capacity, and changing reality into an executable schedule — but has not earned a standalone repo, runtime, backend, or visual app. Its next proof is the smallest real-life conversation → reconcile → calendar loop. Future Babel products may hand ARC only the smallest useful scheduling intent under ADR 0005; ARC does not absorb WORLD or other specialist internals.
 
 The owning repo's `START_HERE.md` controls its exact current gate.
 
