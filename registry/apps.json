@@ -21,8 +21,8 @@
       "runtime": true,
       "truthAdoption": {
         "status": "reconciled",
-        "truthCommit": "21cb7307f8a1306101d7761f11da79b44752e13b",
-        "adoptionMergeCommit": "fff5522702eea804d7ab09d42321f33cc1ff7396"
+        "truthCommit": "5858e544f2e61ceab4b0cae2a52d2c922b800d77",
+        "adoptionMergeCommit": "1176eef21875e5c2968470d62a2e28136cb81d9e"
       },
       "notes": "Owns FIRE doctrine, production runtime/data, frozen successor shell, specs/tests, and promoted implementation. V6 remains production; G7 is 10/10 Locked and Frozen at runtime anchor 4a258c5170dd1d96dcbc0f2b0a9c35b283cec489. The current FIRE Core Lab specimen is the top-of-product heartbeat; it is evidence pending physical iPhone review, not production behavior."
     },
@@ -35,8 +35,8 @@
       "runtime": false,
       "truthAdoption": {
         "status": "reconciled",
-        "truthCommit": "21cb7307f8a1306101d7761f11da79b44752e13b",
-        "adoptionMergeCommit": "f246c64b1e99947e2e9acc6d07ace9b11629fead"
+        "truthCommit": "5858e544f2e61ceab4b0cae2a52d2c922b800d77",
+        "adoptionMergeCommit": "21b4e529bbd3bcf82f65ab0b657ae9500e017256"
       },
       "notes": "Lab is evidence, never authority. It hosts Shell Gallery plus isolated Fire Lab and World Lab experiments using fake/local state by default. FIRE Core may audition bounded unproven interaction behavior here without moving product ownership. WORLD Phase 1 remains a Lab product audition and does not yet justify a standalone WORLD repository."
     },
