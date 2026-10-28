@@ -24,7 +24,7 @@
         "truthCommit": "21cb7307f8a1306101d7761f11da79b44752e13b",
         "adoptionMergeCommit": "fff5522702eea804d7ab09d42321f33cc1ff7396"
       },
-      "notes": "Owns FIRE doctrine, production runtime/data, frozen successor shell, specs/tests, and promoted implementation. V6 remains production; G7 is 10/10 Locked and Frozen at runtime anchor 4a258c5170dd1d96dcbc0f2b0a9c35b283cec489. Current FIRE Core doctrine uses the Production Map + Active Focus + FIRE Loop model. The first unproven Core interaction is auditioned in Lab; closed PR #99 is seed/history only."
+      "notes": "Owns FIRE doctrine, production runtime/data, frozen successor shell, specs/tests, and promoted implementation. V6 remains production; G7 is 10/10 Locked and Frozen at runtime anchor 4a258c5170dd1d96dcbc0f2b0a9c35b283cec489. The current FIRE Core Lab specimen is the top-of-product heartbeat; it is evidence pending physical iPhone review, not production behavior."
     },
     {
       "name": "Babel Lab",
@@ -48,6 +48,15 @@
       "runtime": false,
       "truthAdoption": "not applicable",
       "notes": "WORLD Phase 1 lives under babel-lab/world/context-loop/. A real WORLD product earns its own repo only after physical use proves independent orientation/decision value beyond a single exact scenario."
+    },
+    {
+      "name": "Babel ARC",
+      "repo": null,
+      "role": "time and capacity coordination product candidate",
+      "status": "concept only",
+      "runtime": false,
+      "truthAdoption": "not applicable",
+      "notes": "ARC means Adapt → Reconcile → Coordinate. Its distinct job is to reconcile commitments, responsibilities, capacity, and changing reality into an executable schedule. It has not earned a standalone repo, backend, runtime, or visual UI; first prove the headless conversation → reconcile → calendar loop in real use. Future cross-app scheduling handoffs should carry only the smallest useful intent under ADR 0005."
     }
   ]
 }
