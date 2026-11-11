@@ -37,6 +37,8 @@ Durable information has one primary owner:
 - `BabeDrums/babel-truth` — cross-app authority/control plane; no product runtime
 - `BabeDrums/babel-fire` — FIRE product and production owner
 - `BabeDrums/babel-lab` — disposable/prototype sandbox and incubator
+- `BabeDrums/babel-trip` — published Babel Trip website; owns site UI, runtime and deployment; no unapproved interface changes
+- `BabeDrums/babel-billz` — private financial/planning continuity only; does not own Babel Trip website UI
 - **WORLD** — concept/product audition inside Lab; no standalone repo yet
 - **ARC** — distinct time/capacity-coordination product candidate; no standalone repo, runtime, or required UI yet
 
