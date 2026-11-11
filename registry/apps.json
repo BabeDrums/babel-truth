@@ -57,6 +57,24 @@
       "runtime": false,
       "truthAdoption": "not applicable",
       "notes": "ARC means Adapt → Reconcile → Coordinate. Its distinct job is to reconcile commitments, responsibilities, capacity, and changing reality into an executable schedule. It has not earned a standalone repo, backend, runtime, or visual UI; first prove the headless conversation → reconcile → calendar loop in real use. Future cross-app scheduling handoffs should carry only the smallest useful intent under ADR 0005."
+    },
+    {
+      "name": "Babel Trip",
+      "repo": "BabeDrums/babel-trip",
+      "role": "published trip tracker website, product-local UI/runtime and deployment authority",
+      "status": "active",
+      "defaultBranch": "main",
+      "runtime": true,
+      "notes": "This repo's published website/index.html owns the current trip interface. Expected Pages URL https://babedrums.github.io/babel-trip/; verify deployment before claiming live. No unapproved UI changes. Never render the old ChatGPT AppBlock in place of the website."
+    },
+    {
+      "name": "Babel Billz",
+      "repo": "BabeDrums/babel-billz",
+      "role": "private financial continuity and historical trip planning, not Babel Trip website runtime",
+      "status": "active",
+      "defaultBranch": "main",
+      "runtime": false,
+      "notes": "Owns finance/bills/trip planning context but not the live Babel Trip UI. Older in-chat render records remain Git history only; see BABEL_TRIP.md website-first handoff."
     }
   ]
 }
